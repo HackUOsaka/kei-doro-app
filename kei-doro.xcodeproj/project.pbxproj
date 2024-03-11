@@ -12,7 +12,7 @@
 		728A4CDC2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDB2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community */; };
 		728A4CDE2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDD2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift */; };
 		728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */; };
-		9E898D902B974E4E003CB854 /* kei_doroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* kei_doroApp.swift */; };
+		9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */; };
 		9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D932B974E4F003CB854 /* Assets.xcassets */; };
 		9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D962B974E4F003CB854 /* Preview Assets.xcassets */; };
 		9E898DA02B97749D003CB854 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D9F2B97749D003CB854 /* Colors.swift */; };
@@ -26,7 +26,7 @@
 		728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSession.swift; sourceTree = "<group>"; };
 		9E898D8C2B974E4E003CB854 /* kei-doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kei-doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9E898D8F2B974E4E003CB854 /* kei_doroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kei_doroApp.swift; sourceTree = "<group>"; };
+		9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeiDoroApp.swift; sourceTree = "<group>"; };
 		9E898D932B974E4F003CB854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9E898D962B974E4F003CB854 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9E898D9F2B97749D003CB854 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -74,7 +74,7 @@
 				728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */,
 				9E898DE42B9ADEC4003CB854 /* Pages */,
 				9E898D9E2B97747C003CB854 /* Theme */,
-				9E898D8F2B974E4E003CB854 /* kei_doroApp.swift */,
+				9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */,
 				9E898D932B974E4F003CB854 /* Assets.xcassets */,
 				9E898D952B974E4F003CB854 /* Preview Content */,
 			);
@@ -213,7 +213,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
-				9E898D902B974E4E003CB854 /* kei_doroApp.swift in Sources */,
+				9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */,
 				9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */,
 				9E898DA02B97749D003CB854 /* Colors.swift in Sources */,
 				728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */,

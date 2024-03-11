@@ -109,6 +109,5 @@ extension NFCSession: NFCNDEFReaderSessionDelegate {
             }
         }
     }
- /////////あいうえお願いしますaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-    ///
+ 
 }
