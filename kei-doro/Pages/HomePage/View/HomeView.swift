@@ -12,10 +12,10 @@ struct HomeView: View {
         VStack {
             NavigationView {
                 NavigationLink(destination: NFCView()) {
-                    Text("GROUPを作成").bold().padding().frame(width: 200, height: 50).foregroundColor(Color.black).background(Color.mainColor).cornerRadius(15)
+                    Text("START").bold().padding().frame(width: 200, height: 100).foregroundColor(Color.black).background(Color.mainColor).cornerRadius(10)
                 }
 //                NavigationLink(destionation: ) {
-                //                    Text("GAMEに参加する")
+//                                    Text("GAMEに参加する").bold().padding().frame(width: 200, height: 100).foregroundColor(Color.black).background(Color.mainColor).cornerRadius(10)
 //                }
             }
         }
