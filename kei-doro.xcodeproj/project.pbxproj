@@ -14,6 +14,8 @@
 		728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */; };
 		728A4D032BA08F0000CAFD73 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D022BA08F0000CAFD73 /* HomeViewModel.swift */; };
 		728A4D052BA08F1F00CAFD73 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D042BA08F1F00CAFD73 /* HomeView.swift */; };
+		728A4D0A2BA0942000CAFD73 /* CreateTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D092BA0942000CAFD73 /* CreateTeamView.swift */; };
+		728A4D0C2BA0949000CAFD73 /* CreateTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D0B2BA0949000CAFD73 /* CreateTeamViewModel.swift */; };
 		9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */; };
 		9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D932B974E4F003CB854 /* Assets.xcassets */; };
 		9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D962B974E4F003CB854 /* Preview Assets.xcassets */; };
@@ -29,6 +31,8 @@
 		728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSession.swift; sourceTree = "<group>"; };
 		728A4D022BA08F0000CAFD73 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ../../../../../../../../Documents/HomeViewModel.swift; sourceTree = "<group>"; };
 		728A4D042BA08F1F00CAFD73 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../../../../Documents/HomeView.swift; sourceTree = "<group>"; };
+		728A4D092BA0942000CAFD73 /* CreateTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTeamView.swift; path = ../../../../../../../../Documents/CreateTeamView.swift; sourceTree = "<group>"; };
+		728A4D0B2BA0949000CAFD73 /* CreateTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTeamViewModel.swift; path = ../../../../../../../../Documents/CreateTeamViewModel.swift; sourceTree = "<group>"; };
 		9E898D8C2B974E4E003CB854 /* kei-doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kei-doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeiDoroApp.swift; sourceTree = "<group>"; };
 		9E898D932B974E4F003CB854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -79,6 +83,38 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		728A4D062BA093BD00CAFD73 /* CreateTeam */ = {
+			isa = PBXGroup;
+			children = (
+				728A4D082BA0941000CAFD73 /* ViewModels */,
+				728A4D072BA0940A00CAFD73 /* Views */,
+			);
+			path = CreateTeam;
+			sourceTree = "<group>";
+		};
+		728A4D072BA0940A00CAFD73 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				728A4D092BA0942000CAFD73 /* CreateTeamView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		728A4D082BA0941000CAFD73 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				728A4D0B2BA0949000CAFD73 /* CreateTeamViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		728A4D0D2BA0AD7000CAFD73 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9E898D832B974E4E003CB854 = {
 			isa = PBXGroup;
 			children = (
@@ -100,6 +136,7 @@
 		9E898D8E2B974E4E003CB854 /* kei-doro */ = {
 			isa = PBXGroup;
 			children = (
+				728A4D0D2BA0AD7000CAFD73 /* Models */,
 				728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */,
 				9E898DE42B9ADEC4003CB854 /* Pages */,
 				9E898D9E2B97747C003CB854 /* Theme */,
@@ -130,6 +167,7 @@
 		9E898DE42B9ADEC4003CB854 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				728A4D062BA093BD00CAFD73 /* CreateTeam */,
 				728A4CFD2BA08ED500CAFD73 /* HomePage */,
 				9E898DE52B9ADF25003CB854 /* LoginPage */,
 			);
@@ -246,7 +284,9 @@
 				728A4D052BA08F1F00CAFD73 /* HomeView.swift in Sources */,
 				9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */,
 				728A4D032BA08F0000CAFD73 /* HomeViewModel.swift in Sources */,
+				728A4D0C2BA0949000CAFD73 /* CreateTeamViewModel.swift in Sources */,
 				9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */,
+				728A4D0A2BA0942000CAFD73 /* CreateTeamView.swift in Sources */,
 				9E898DA02B97749D003CB854 /* Colors.swift in Sources */,
 				728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */,
 			);
