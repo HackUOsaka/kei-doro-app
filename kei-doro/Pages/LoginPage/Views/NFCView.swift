@@ -14,7 +14,15 @@ struct NFCView: View {
                                    alertMessage = error.localizedDescription
                                } else {
                                    alertMessage = "読み込みました！"
-                                   viewModel.saveUserId(UserId: text ?? "")
+                                   Task{
+                                       do{
+                                           try await viewModel.saveUserId(UserId: text ?? "")
+                                       }
+                                       catch{
+                                           print(error)
+                                       }
+                                   }
+                                  
                                    //違うNFC読み込まれた時どうしよう・・・
                                    
                                    
