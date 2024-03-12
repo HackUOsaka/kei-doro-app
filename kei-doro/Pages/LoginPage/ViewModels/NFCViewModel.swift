@@ -11,14 +11,11 @@ class NFCViewModel: ObservableObject {
         let data = document.data()
         let userId = data?["id"]
         if userId as? String == nil{
-            
-            
-            
-            
             try await db.collection("users").document(UserId).setData([
                 "id": UserId,
                 "name": "guest"])
         }
+        
         
     }
 }

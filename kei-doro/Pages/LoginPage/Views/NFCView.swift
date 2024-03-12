@@ -2,7 +2,7 @@ import SwiftUI
 
 struct NFCView: View {
     @StateObject  var session = NFCSession()
-    @ObservedObject var viewModel: NFCViewModel
+    @ObservedObject var viewModel = NFCViewModel()
     @State private var alertMessage = ""
     @State private var isAlertShown = false
     
