@@ -12,8 +12,6 @@
 		728A4CDC2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDB2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community */; };
 		728A4CDE2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDD2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift */; };
 		728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */; };
-		728A4D032BA08F0000CAFD73 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D022BA08F0000CAFD73 /* HomeViewModel.swift */; };
-		728A4D052BA08F1F00CAFD73 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D042BA08F1F00CAFD73 /* HomeView.swift */; };
 		9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */; };
 		9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D932B974E4F003CB854 /* Assets.xcassets */; };
 		9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D962B974E4F003CB854 /* Preview Assets.xcassets */; };
@@ -21,14 +19,15 @@
 		9E898DE12B988967003CB854 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9E898DE02B988967003CB854 /* .gitignore */; };
 		9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898DE72B9ADF51003CB854 /* NFCView.swift */; };
 		9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */; };
+		CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */; };
+		CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */; };
+		CE0228AB2BA0A1EF0013A2E2 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "kei-doro.entitlements"; sourceTree = "<group>"; };
 		728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSession.swift; sourceTree = "<group>"; };
-		728A4D022BA08F0000CAFD73 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeViewModel.swift; path = ../../../../../../../../Documents/HomeViewModel.swift; sourceTree = "<group>"; };
-		728A4D042BA08F1F00CAFD73 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeView.swift; path = ../../../../../../../../Documents/HomeView.swift; sourceTree = "<group>"; };
 		9E898D8C2B974E4E003CB854 /* kei-doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kei-doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeiDoroApp.swift; sourceTree = "<group>"; };
 		9E898D932B974E4F003CB854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -38,6 +37,9 @@
 		9E898DE72B9ADF51003CB854 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
 		9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewModel.swift; sourceTree = "<group>"; };
 		9E898DEC2B9AE028003CB854 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +68,7 @@
 		728A4CFE2BA08EDD00CAFD73 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				728A4D022BA08F0000CAFD73 /* HomeViewModel.swift */,
+				CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -74,7 +76,7 @@
 		728A4CFF2BA08EE500CAFD73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				728A4D042BA08F1F00CAFD73 /* HomeView.swift */,
+				CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +132,7 @@
 		9E898DE42B9ADEC4003CB854 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				CE0228AC2BA0A1F40013A2E2 /* PlayPage */,
 				728A4CFD2BA08ED500CAFD73 /* HomePage */,
 				9E898DE52B9ADF25003CB854 /* LoginPage */,
 			);
@@ -158,6 +161,30 @@
 			children = (
 				728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */,
 				9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		CE0228AC2BA0A1F40013A2E2 /* PlayPage */ = {
+			isa = PBXGroup;
+			children = (
+				CE0228AD2BA0A20B0013A2E2 /* Views */,
+				CE0228AE2BA0A2140013A2E2 /* ViewModels */,
+			);
+			path = PlayPage;
+			sourceTree = "<group>";
+		};
+		CE0228AD2BA0A20B0013A2E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE0228AE2BA0A2140013A2E2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -242,10 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0228AB2BA0A1EF0013A2E2 /* CallView.swift in Sources */,
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
-				728A4D052BA08F1F00CAFD73 /* HomeView.swift in Sources */,
+				CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */,
+				CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */,
 				9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */,
-				728A4D032BA08F0000CAFD73 /* HomeViewModel.swift in Sources */,
 				9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */,
 				9E898DA02B97749D003CB854 /* Colors.swift in Sources */,
 				728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */,
