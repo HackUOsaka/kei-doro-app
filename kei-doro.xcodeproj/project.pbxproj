@@ -23,6 +23,9 @@
 		9E898DE12B988967003CB854 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 9E898DE02B988967003CB854 /* .gitignore */; };
 		9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898DE72B9ADF51003CB854 /* NFCView.swift */; };
 		9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */; };
+		CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */; };
+		CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */; };
+		CE0228AB2BA0A1EF0013A2E2 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		9E898DE72B9ADF51003CB854 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
 		9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewModel.swift; sourceTree = "<group>"; };
 		9E898DEC2B9AE028003CB854 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,7 +76,7 @@
 		728A4CFE2BA08EDD00CAFD73 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				728A4D022BA08F0000CAFD73 /* HomeViewModel.swift */,
+				CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -78,7 +84,7 @@
 		728A4CFF2BA08EE500CAFD73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				728A4D042BA08F1F00CAFD73 /* HomeView.swift */,
+				CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +206,30 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		CE0228AC2BA0A1F40013A2E2 /* PlayPage */ = {
+			isa = PBXGroup;
+			children = (
+				CE0228AD2BA0A20B0013A2E2 /* Views */,
+				CE0228AE2BA0A2140013A2E2 /* ViewModels */,
+			);
+			path = PlayPage;
+			sourceTree = "<group>";
+		};
+		CE0228AD2BA0A20B0013A2E2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CE0228AE2BA0A2140013A2E2 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -280,8 +310,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE0228AB2BA0A1EF0013A2E2 /* CallView.swift in Sources */,
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
-				728A4D052BA08F1F00CAFD73 /* HomeView.swift in Sources */,
+				CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */,
+				CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */,
 				9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */,
 				728A4D032BA08F0000CAFD73 /* HomeViewModel.swift in Sources */,
 				728A4D0C2BA0949000CAFD73 /* CreateTeamViewModel.swift in Sources */,
