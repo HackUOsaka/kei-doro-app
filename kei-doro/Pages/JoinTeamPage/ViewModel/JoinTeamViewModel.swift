@@ -29,13 +29,13 @@ class JoinTeamViewModel: ObservableObject {
         let data = document.data()
         let time = data?["limit"] as! String
         return time
-     
+        
     }
     func getOni(gameId: String)async throws -> String{
         let document =  try await db.collection("games").document(gameId).getDocument()
         let data = document.data()
         let oni = data?["oni"] as! String
         return oni
-     
+        
     }
 }

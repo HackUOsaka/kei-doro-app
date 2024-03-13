@@ -15,6 +15,7 @@ struct HomeView: View {
     @State var errorArart = false
     @State var gameId = ""
     @State var openJoinView = false
+    @State var name = ""
     var body: some View {
         
         VStack {
@@ -50,12 +51,7 @@ struct HomeView: View {
             .background(Color.mainColor)
             .cornerRadius(10)
             
-            //シュミレーターでやる人はこの辺のコード入ります
-            
-//                        .onAppear(){
-//                            var savedata: UserDefaults = UserDefaults.standard
-//                            savedata.set(UUID().uuidString, forKey: "UserId")
-//                        }
+       
             
             .sheet(isPresented: $createTeam) {
                 CreateTeamView(userId: "", gameId: "", picktime: "10", pickOni:  "1", gameMasterName: "")
@@ -68,7 +64,8 @@ struct HomeView: View {
                     
                     Task {
                         do{
-                            boolGameTeam =  try await viewModel.searchgame(gameId: gameId)
+                           name = try await viewModel.makeIcon()
+                            boolGameTeam =  try await viewModel.searchgame(gameId: gameId, name: name)
                             if boolGameTeam == false{
                                 errorArart.toggle()
                             }else{

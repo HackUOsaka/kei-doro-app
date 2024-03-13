@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct JoinTeamView: View {
     @ObservedObject var viewModel = JoinTeamViewModel()
@@ -14,7 +15,7 @@ struct JoinTeamView: View {
     @State var users = [String]()
     @State var time: String
     @State var oni: String
-
+    
     var body: some View {
         VStack{
             HStack{
@@ -48,16 +49,80 @@ struct JoinTeamView: View {
         .onAppear(){
             Task{
                 do{
-                  users = try await viewModel.getUsers(gameId: gameId)
-                    time = try await viewModel.getTime(gameId: gameId)
-                    oni = try await viewModel.getOni(gameId: gameId)
+                    try await getUsers(gameId: gameId)
+                  gettime(gameId: gameId)
                 }
                 catch{
                     print(error)
                 }
             }
-          
+            
         }
+    }
+    func getUsers(gameId: String)async throws{
+        var userName = [String]()
+        let db = Firestore.firestore()
+        
+        db.collection("games").document(gameId)
+            .addSnapshotListener { documentSnapshot, error in
+                guard let document = documentSnapshot else {
+                    print("Error fetching document: \(error!)")
+                    return
+                }
+                guard let data = document.data() else {
+                    print("Document data was empty.")
+                    return
+                }
+                let playerIds = data["names"] as![String]
+                
+                
+                print(playerIds)
+                
+                userName = []
+                users = []
+                
+                for name in playerIds{
+                    let index = name.startIndex
+                    let firstName = String(name[index])
+                    print(name)
+                    users.append(firstName)
+                }
+                
+                print("Current data: \(userName)")
+                
+                
+                
+                
+                
+            }
+        
+    }
+    func gettime(gameId: String){
+        var userName = [String]()
+        let db = Firestore.firestore()
+        
+        db.collection("games").document(gameId)
+            .addSnapshotListener { documentSnapshot, error in
+                guard let document = documentSnapshot else {
+                    print("Error fetching document: \(error!)")
+                    return
+                }
+                guard let data = document.data() else {
+                    print("Document data was empty.")
+                    return
+                }
+                let limit = data["limit"] as! String
+                let Oni = data["oni"] as! String
+                
+              
+                
+              time = limit
+                oni = Oni
+                print("Current data: \(userName)")
+                  
+                
+            }
+        
     }
 }
 
