@@ -12,8 +12,8 @@
 		728A4CDC2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDB2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community */; };
 		728A4CDE2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDD2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift */; };
 		728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */; };
-		728A4D1A2BA14E6300CAFD73 /* CreateTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D192BA14E6300CAFD73 /* CreateTeamView.swift */; };
-		728A4D1F2BA14F0700CAFD73 /* CreateTeamViewModel2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D1E2BA14F0700CAFD73 /* CreateTeamViewModel2.swift */; };
+		728A4D212BA168F300CAFD73 /* CreateTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D202BA168F300CAFD73 /* CreateTeamView.swift */; };
+		728A4D232BA16E2800CAFD73 /* CreateTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D222BA16E2800CAFD73 /* CreateTeamViewModel.swift */; };
 		9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */; };
 		9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D932B974E4F003CB854 /* Assets.xcassets */; };
 		9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D962B974E4F003CB854 /* Preview Assets.xcassets */; };
@@ -30,8 +30,8 @@
 		728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "kei-doro.entitlements"; sourceTree = "<group>"; };
 		728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSession.swift; sourceTree = "<group>"; };
-		728A4D192BA14E6300CAFD73 /* CreateTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTeamView.swift; path = ../../../../../../../Documents/CreateTeamView.swift; sourceTree = "<group>"; };
-		728A4D1E2BA14F0700CAFD73 /* CreateTeamViewModel2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CreateTeamViewModel2.swift; path = ../../../../../../../../Documents/CreateTeamViewModel2.swift; sourceTree = "<group>"; };
+		728A4D202BA168F300CAFD73 /* CreateTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamView.swift; sourceTree = "<group>"; };
+		728A4D222BA16E2800CAFD73 /* CreateTeamViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeamViewModel.swift; sourceTree = "<group>"; };
 		9E898D8C2B974E4E003CB854 /* kei-doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kei-doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeiDoroApp.swift; sourceTree = "<group>"; };
 		9E898D932B974E4F003CB854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -90,7 +90,6 @@
 			children = (
 				728A4D1C2BA14E7100CAFD73 /* ViewModels */,
 				728A4D1B2BA14E6B00CAFD73 /* Views */,
-				728A4D192BA14E6300CAFD73 /* CreateTeamView.swift */,
 			);
 			path = CreateTeamPage;
 			sourceTree = "<group>";
@@ -98,6 +97,7 @@
 		728A4D1B2BA14E6B00CAFD73 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				728A4D202BA168F300CAFD73 /* CreateTeamView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -105,7 +105,7 @@
 		728A4D1C2BA14E7100CAFD73 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				728A4D1E2BA14F0700CAFD73 /* CreateTeamViewModel2.swift */,
+				728A4D222BA16E2800CAFD73 /* CreateTeamViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -303,10 +303,10 @@
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
 				CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */,
 				CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */,
-				728A4D1F2BA14F0700CAFD73 /* CreateTeamViewModel2.swift in Sources */,
-				728A4D1A2BA14E6300CAFD73 /* CreateTeamView.swift in Sources */,
 				9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */,
+				728A4D232BA16E2800CAFD73 /* CreateTeamViewModel.swift in Sources */,
 				9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */,
+				728A4D212BA168F300CAFD73 /* CreateTeamView.swift in Sources */,
 				9E898DA02B97749D003CB854 /* Colors.swift in Sources */,
 				728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */,
 			);
