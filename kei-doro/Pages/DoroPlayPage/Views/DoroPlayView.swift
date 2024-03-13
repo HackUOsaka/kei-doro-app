@@ -88,11 +88,11 @@
  }
 
  struct CallButton: View {
-     @State var showNextView: Bool = false
+     @State var showChatView: Bool = false
      var body: some View {
          NavigationStack {
              Button(action: {
-                 self.showNextView = true
+                 self.showChatView = true
              }, label: {
                  Image(systemName: "mic.fill")
                      .font(.system(size: 25))
@@ -101,9 +101,9 @@
                      .background(Color.secondColor)
                      .cornerRadius(60)
              })
-             .sheet(isPresented: $showNextView, content: {
-                 CallView()
-             })
+             .fullScreenCover(isPresented: $showChatView) {
+                 ChatView()
+             }
          }
          .frame(width: 120, height: 120)
          .cornerRadius(60)
