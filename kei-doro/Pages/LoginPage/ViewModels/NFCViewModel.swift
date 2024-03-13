@@ -13,10 +13,8 @@ class NFCViewModel: ObservableObject {
         if userId as? String == nil{
             try await db.collection("users").document(UserId).setData([
                 "id": UserId,
-                "name": "guest",
-                "password": "password"])
+                "name": "guest"])
         }
-        savedata.set(UserId, forKey: "UserId")
         
         
     }
