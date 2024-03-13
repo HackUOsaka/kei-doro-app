@@ -12,7 +12,8 @@ class NFCViewModel: ObservableObject {
         if userId as? String == nil{
             try await db.collection("users").document(UserId).setData([
                 "id": UserId,
-                "name": "guest"])
+                "name": "guest",
+                "password": "password"])
         }
     }
 }
