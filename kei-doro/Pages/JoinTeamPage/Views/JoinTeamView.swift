@@ -58,6 +58,7 @@ struct JoinTeamView: View {
             }
             
         }
+       
     }
     func getUsers(gameId: String)async throws{
         var userName = [String]()
