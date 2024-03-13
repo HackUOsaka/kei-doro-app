@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72029D352BA18FE400E37E62 /* JoinTeamViewModel.swift */; };
 		728A4CBF2B9ED6C700CAFD73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */; };
 		728A4CDA2B9EDA6B00CAFD73 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CD92B9EDA6B00CAFD73 /* FirebaseFirestore */; };
 		728A4CDC2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDB2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		72029D352BA18FE400E37E62 /* JoinTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamViewModel.swift; sourceTree = "<group>"; };
 		728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "kei-doro.entitlements"; sourceTree = "<group>"; };
 		728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSession.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		728A4D262BA173D200CAFD73 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				72029D352BA18FE400E37E62 /* JoinTeamViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */,
 				728A4D212BA168F300CAFD73 /* CreateTeamView.swift in Sources */,
 				728A4D282BA173E200CAFD73 /* JoinTeamView.swift in Sources */,
+				72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */,
 				9E898DA02B97749D003CB854 /* Colors.swift in Sources */,
 				728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */,
 			);
