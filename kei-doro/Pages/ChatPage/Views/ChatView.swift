@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
+    @ObservedObject var gameID = Model()
     var body: some View {
         ChatViewControllerWrapper {
             Text("Hello, World!")
@@ -25,6 +26,8 @@ struct ChatViewControllerWrapper<Content: View>: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: ChatViewController, context: Context) {
+//        ChatViewController().groupID = self.gameId
+//        print("gameId: \(gameId)")
     }
 }
 

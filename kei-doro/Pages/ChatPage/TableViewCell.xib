@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="97" id="r3o-w1-v45" customClass="TableViewCell" customModule="kei_doro" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="r3o-w1-v45" id="2p5-6o-jRQ">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="72"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="qek-Md-ilC">
+                        <rect key="frame" x="24" y="16" width="200" height="40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="zfE-yb-zTS"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="u87-Gg-OJ1">
+                        <rect key="frame" x="96" y="16" width="200" height="40"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="200" id="4ew-uZ-0Gw"/>
+                        </constraints>
+                        <color key="textColor" systemColor="labelColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="u87-Gg-OJ1" firstAttribute="top" secondItem="2p5-6o-jRQ" secondAttribute="top" constant="16" id="766-Lv-Zfh"/>
+                    <constraint firstItem="qek-Md-ilC" firstAttribute="leading" secondItem="2p5-6o-jRQ" secondAttribute="leading" constant="24" id="9ZA-jT-qFm"/>
+                    <constraint firstItem="qek-Md-ilC" firstAttribute="top" secondItem="2p5-6o-jRQ" secondAttribute="top" constant="16" id="hb0-Pz-T6k"/>
+                    <constraint firstAttribute="trailing" secondItem="u87-Gg-OJ1" secondAttribute="trailing" constant="24" id="l9r-qC-Aag"/>
+                    <constraint firstAttribute="bottom" secondItem="qek-Md-ilC" secondAttribute="bottom" constant="16" id="rtn-gG-rEc"/>
+                    <constraint firstAttribute="bottom" secondItem="u87-Gg-OJ1" secondAttribute="bottom" constant="16" id="z3a-Nz-hhP"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" name="BackColor"/>
+            <connections>
+                <outlet property="classmateTextView" destination="qek-Md-ilC" id="494-MP-XBg"/>
+                <outlet property="myTextView" destination="u87-Gg-OJ1" id="S3O-4m-5Ra"/>
+                <outlet property="myTextViewConstraint" destination="4ew-uZ-0Gw" id="ebN-qI-0Yj"/>
+                <outlet property="textViewWidthConstraint" destination="zfE-yb-zTS" id="Les-Y3-Kg5"/>
+            </connections>
+            <point key="canvasLocation" x="-358.01526717557249" y="161.61971830985917"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="BackColor">
+            <color red="0.0" green="0.14117647058823529" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
