@@ -39,9 +39,10 @@ struct DoroTimerLabel: View {
 }
 
 struct MissionButton: View {
+    @State var toMissionView: Bool = false
     var body: some View {
         Button(action: {
-            print()
+            self.toMissionView = true
         }, label: {
             Image(systemName: "checklist")
                 .font(.system(size: 25))
@@ -53,9 +54,11 @@ struct MissionButton: View {
                     RoundedRectangle(cornerRadius: 50)
                         .stroke(Color.secondColor, lineWidth: 1))
         })
+        .sheet(isPresented: $toMissionView, content: {
+            MissionView()
+        })
     }
 }
-
 #Preview {
     DoroPlayView()
 }

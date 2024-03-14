@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ChatView: View {
-    @ObservedObject var gameID = Model()
+//    @ObservedObject var gameID = Model()
     var body: some View {
         ChatViewControllerWrapper {
             Text("Hello, World!")
