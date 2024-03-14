@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct PlayView: View {
-    @ObservedObject var gameId: Model
+//    @ObservedObject var gameId: Model
     //ここも編集する！
     let role: Bool = true
     var body: some View {

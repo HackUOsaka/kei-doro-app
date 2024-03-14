@@ -18,6 +18,21 @@
 		728A4D212BA168F300CAFD73 /* CreateTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D202BA168F300CAFD73 /* CreateTeamView.swift */; };
 		728A4D232BA16E2800CAFD73 /* CreateTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D222BA16E2800CAFD73 /* CreateTeamViewModel.swift */; };
 		728A4D282BA173E200CAFD73 /* JoinTeamView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 728A4D272BA173E200CAFD73 /* JoinTeamView.swift */; };
+		9E37FC1A2BA32CF6007835C7 /* DoroPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC172BA32CF6007835C7 /* DoroPlayView.swift */; };
+		9E37FC1B2BA32CF6007835C7 /* KeiPlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC182BA32CF6007835C7 /* KeiPlayView.swift */; };
+		9E37FC1C2BA32CF6007835C7 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC192BA32CF6007835C7 /* PlayView.swift */; };
+		9E37FC262BA32DA8007835C7 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC1E2BA32DA8007835C7 /* ChatViewController.swift */; };
+		9E37FC272BA32DA8007835C7 /* ChatViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E37FC1F2BA32DA8007835C7 /* ChatViewController.xib */; };
+		9E37FC282BA32DA8007835C7 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC202BA32DA8007835C7 /* TableViewCell.swift */; };
+		9E37FC292BA32DA8007835C7 /* MessageInputAccesoryView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E37FC212BA32DA8007835C7 /* MessageInputAccesoryView.xib */; };
+		9E37FC2A2BA32DA8007835C7 /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E37FC222BA32DA8007835C7 /* TableViewCell.xib */; };
+		9E37FC2B2BA32DA8007835C7 /* MessageInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC232BA32DA8007835C7 /* MessageInputAccesoryView.swift */; };
+		9E37FC2C2BA32DA8007835C7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC252BA32DA8007835C7 /* ChatView.swift */; };
+		9E37FC2F2BA32E72007835C7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9E37FC2E2BA32E72007835C7 /* FirebaseAuth */; };
+		9E37FC372BA32F07007835C7 /* EndTimePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC322BA32F07007835C7 /* EndTimePickerViewModel.swift */; };
+		9E37FC382BA32F07007835C7 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC332BA32F07007835C7 /* TimerViewModel.swift */; };
+		9E37FC392BA32F07007835C7 /* CircleProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */; };
+		9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC362BA32F07007835C7 /* TimerView.swift */; };
 		9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */; };
 		9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D932B974E4F003CB854 /* Assets.xcassets */; };
 		9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D962B974E4F003CB854 /* Preview Assets.xcassets */; };
@@ -27,7 +42,6 @@
 		9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */; };
 		CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */; };
 		CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */; };
-		CE0228AB2BA0A1EF0013A2E2 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +55,20 @@
 		728A4D202BA168F300CAFD73 /* CreateTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamView.swift; sourceTree = "<group>"; };
 		728A4D222BA16E2800CAFD73 /* CreateTeamViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeamViewModel.swift; sourceTree = "<group>"; };
 		728A4D272BA173E200CAFD73 /* JoinTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamView.swift; sourceTree = "<group>"; };
+		9E37FC172BA32CF6007835C7 /* DoroPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoroPlayView.swift; sourceTree = "<group>"; };
+		9E37FC182BA32CF6007835C7 /* KeiPlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeiPlayView.swift; sourceTree = "<group>"; };
+		9E37FC192BA32CF6007835C7 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		9E37FC1E2BA32DA8007835C7 /* ChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		9E37FC1F2BA32DA8007835C7 /* ChatViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatViewController.xib; sourceTree = "<group>"; };
+		9E37FC202BA32DA8007835C7 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		9E37FC212BA32DA8007835C7 /* MessageInputAccesoryView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MessageInputAccesoryView.xib; sourceTree = "<group>"; };
+		9E37FC222BA32DA8007835C7 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		9E37FC232BA32DA8007835C7 /* MessageInputAccesoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInputAccesoryView.swift; sourceTree = "<group>"; };
+		9E37FC252BA32DA8007835C7 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		9E37FC322BA32F07007835C7 /* EndTimePickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTimePickerViewModel.swift; sourceTree = "<group>"; };
+		9E37FC332BA32F07007835C7 /* TimerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressViewModel.swift; sourceTree = "<group>"; };
+		9E37FC362BA32F07007835C7 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		9E898D8C2B974E4E003CB854 /* kei-doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kei-doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeiDoroApp.swift; sourceTree = "<group>"; };
 		9E898D932B974E4F003CB854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +80,6 @@
 		9E898DEC2B9AE028003CB854 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
-		CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +90,7 @@
 				728A4CDA2B9EDA6B00CAFD73 /* FirebaseFirestore in Frameworks */,
 				728A4CDE2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift in Frameworks */,
 				728A4CDC2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community in Frameworks */,
+				9E37FC2F2BA32E72007835C7 /* FirebaseAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -169,6 +197,63 @@
 			path = ViewModel;
 			sourceTree = "<group>";
 		};
+		9E37FC1D2BA32DA8007835C7 /* ChatPage */ = {
+			isa = PBXGroup;
+			children = (
+				9E37FC1E2BA32DA8007835C7 /* ChatViewController.swift */,
+				9E37FC1F2BA32DA8007835C7 /* ChatViewController.xib */,
+				9E37FC202BA32DA8007835C7 /* TableViewCell.swift */,
+				9E37FC212BA32DA8007835C7 /* MessageInputAccesoryView.xib */,
+				9E37FC222BA32DA8007835C7 /* TableViewCell.xib */,
+				9E37FC232BA32DA8007835C7 /* MessageInputAccesoryView.swift */,
+				9E37FC242BA32DA8007835C7 /* Views */,
+			);
+			path = ChatPage;
+			sourceTree = "<group>";
+		};
+		9E37FC242BA32DA8007835C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E37FC252BA32DA8007835C7 /* ChatView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9E37FC2D2BA32E72007835C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9E37FC302BA32F07007835C7 /* TimerPage */ = {
+			isa = PBXGroup;
+			children = (
+				9E37FC312BA32F07007835C7 /* ViewModels */,
+				9E37FC352BA32F07007835C7 /* Views */,
+			);
+			name = TimerPage;
+			path = "kei-doro/Pages/TimerPage";
+			sourceTree = SOURCE_ROOT;
+		};
+		9E37FC312BA32F07007835C7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				9E37FC322BA32F07007835C7 /* EndTimePickerViewModel.swift */,
+				9E37FC332BA32F07007835C7 /* TimerViewModel.swift */,
+				9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		9E37FC352BA32F07007835C7 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9E37FC362BA32F07007835C7 /* TimerView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		9E898D832B974E4E003CB854 = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +261,7 @@
 				9E898DE02B988967003CB854 /* .gitignore */,
 				9E898D8E2B974E4E003CB854 /* kei-doro */,
 				9E898D8D2B974E4E003CB854 /* Products */,
+				9E37FC2D2BA32E72007835C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -222,6 +308,8 @@
 		9E898DE42B9ADEC4003CB854 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				9E37FC302BA32F07007835C7 /* TimerPage */,
+				9E37FC1D2BA32DA8007835C7 /* ChatPage */,
 				72029D372BA1F07700E37E62 /* MapPage */,
 				728A4D242BA173BF00CAFD73 /* JoinTeamPage */,
 				728A4D182BA14DCF00CAFD73 /* CreateTeamPage */,
@@ -261,7 +349,6 @@
 			isa = PBXGroup;
 			children = (
 				CE0228AD2BA0A20B0013A2E2 /* Views */,
-				CE0228AE2BA0A2140013A2E2 /* ViewModels */,
 			);
 			path = PlayPage;
 			sourceTree = "<group>";
@@ -269,16 +356,11 @@
 		CE0228AD2BA0A20B0013A2E2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				CE0228AA2BA0A1EF0013A2E2 /* CallView.swift */,
+				9E37FC172BA32CF6007835C7 /* DoroPlayView.swift */,
+				9E37FC182BA32CF6007835C7 /* KeiPlayView.swift */,
+				9E37FC192BA32CF6007835C7 /* PlayView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		CE0228AE2BA0A2140013A2E2 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +383,7 @@
 				728A4CD92B9EDA6B00CAFD73 /* FirebaseFirestore */,
 				728A4CDB2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community */,
 				728A4CDD2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift */,
+				9E37FC2E2BA32E72007835C7 /* FirebaseAuth */,
 			);
 			productName = "kei-doro";
 			productReference = 9E898D8C2B974E4E003CB854 /* kei-doro.app */;
@@ -349,7 +432,10 @@
 			files = (
 				9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */,
 				728A4CBF2B9ED6C700CAFD73 /* GoogleService-Info.plist in Resources */,
+				9E37FC2A2BA32DA8007835C7 /* TableViewCell.xib in Resources */,
+				9E37FC292BA32DA8007835C7 /* MessageInputAccesoryView.xib in Resources */,
 				9E898DE12B988967003CB854 /* .gitignore in Resources */,
+				9E37FC272BA32DA8007835C7 /* ChatViewController.xib in Resources */,
 				9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,15 +447,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE0228AB2BA0A1EF0013A2E2 /* CallView.swift in Sources */,
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
 				CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */,
 				CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */,
+				9E37FC282BA32DA8007835C7 /* TableViewCell.swift in Sources */,
+				9E37FC1C2BA32CF6007835C7 /* PlayView.swift in Sources */,
+				9E37FC2B2BA32DA8007835C7 /* MessageInputAccesoryView.swift in Sources */,
+				9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */,
 				72029D3B2BA1F09C00E37E62 /* MapView.swift in Sources */,
+				9E37FC1A2BA32CF6007835C7 /* DoroPlayView.swift in Sources */,
+				9E37FC382BA32F07007835C7 /* TimerViewModel.swift in Sources */,
+				9E37FC1B2BA32CF6007835C7 /* KeiPlayView.swift in Sources */,
 				9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */,
 				728A4D232BA16E2800CAFD73 /* CreateTeamViewModel.swift in Sources */,
 				9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */,
+				9E37FC2C2BA32DA8007835C7 /* ChatView.swift in Sources */,
 				728A4D212BA168F300CAFD73 /* CreateTeamView.swift in Sources */,
+				9E37FC372BA32F07007835C7 /* EndTimePickerViewModel.swift in Sources */,
+				9E37FC392BA32F07007835C7 /* CircleProgressViewModel.swift in Sources */,
+				9E37FC262BA32DA8007835C7 /* ChatViewController.swift in Sources */,
 				728A4D282BA173E200CAFD73 /* JoinTeamView.swift in Sources */,
 				72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */,
 				723BDA0A2BA1F3DA0008210F /* MapViewModel.swift in Sources */,
@@ -509,7 +605,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"kei-doro/Preview Content\"";
-				DEVELOPMENT_TEAM = TVH687AC7F;
+				DEVELOPMENT_TEAM = R3Q2SUPNB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "kei-doro/Info.plist";
@@ -543,7 +639,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"kei-doro/Preview Content\"";
-				DEVELOPMENT_TEAM = TVH687AC7F;
+				DEVELOPMENT_TEAM = R3Q2SUPNB2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "kei-doro/Info.plist";
@@ -617,6 +713,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 728A4CC02B9EDA6B00CAFD73 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		9E37FC2E2BA32E72007835C7 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 728A4CC02B9EDA6B00CAFD73 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
