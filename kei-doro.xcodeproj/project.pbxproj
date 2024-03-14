@@ -254,6 +254,14 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		9E37FC3B2BA33293007835C7 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		9E898D832B974E4E003CB854 = {
 			isa = PBXGroup;
 			children = (
@@ -276,6 +284,7 @@
 		9E898D8E2B974E4E003CB854 /* kei-doro */ = {
 			isa = PBXGroup;
 			children = (
+				9E37FC3B2BA33293007835C7 /* Utils */,
 				72029D3C2BA1F13600E37E62 /* Info.plist */,
 				728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */,
 				9E898DE42B9ADEC4003CB854 /* Pages */,
@@ -298,7 +307,6 @@
 		9E898D9E2B97747C003CB854 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */,
 				728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */,
 				9E898D9F2B97749D003CB854 /* Colors.swift */,
 			);
