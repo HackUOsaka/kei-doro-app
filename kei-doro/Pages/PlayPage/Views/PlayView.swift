@@ -2,7 +2,9 @@
 import SwiftUI
 
 struct PlayView: View {
-    let role: Bool = false
+    @ObservedObject var gameId: Model
+    //ここも編集する！
+    let role: Bool = true
     var body: some View {
         ZStack {
             Color.backColor
@@ -85,9 +87,9 @@ struct CallButton: View {
                     .background(Color.secondColor)
                     .cornerRadius(60)
             })
-            .fullScreenCover(isPresented: $showChatView) {
+            .sheet(isPresented: $showChatView, content: {
                 ChatView()
-            }
+            })
         }
         .frame(width: 120, height: 120)
         .cornerRadius(60)
