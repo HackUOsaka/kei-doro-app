@@ -4,7 +4,6 @@ import FirebaseFirestore
 class NFCViewModel: ObservableObject {
     var savedata: UserDefaults = UserDefaults.standard
     let db = Firestore.firestore()
- 
     
     func saveUserId(UserId: String) async throws{
         print(UserId)
@@ -18,7 +17,7 @@ class NFCViewModel: ObservableObject {
                 "password": "password"])
            
         }
-        savedata.set(userId, forKey: "UserId")
-       
+        savedata.set(userId, forKey: "UserId")       
+
     }
 }

@@ -17,8 +17,7 @@ struct HomeView: View {
     @State var openJoinView = false
     var body: some View {
         
-        VStack {
-            
+        VStack {            
             
             NFCView()
             
@@ -106,3 +105,4 @@ struct HomeView: View {
 #Preview {
     HomeView()
 }
+
