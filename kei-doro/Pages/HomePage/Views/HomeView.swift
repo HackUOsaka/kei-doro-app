@@ -8,14 +8,19 @@
 import SwiftUI
 
 struct HomeView: View {
-    
+    @ObservedObject var viewModel = HomeViewModel()
     @State var createTeam = false
+    @State var JoinTeam = false
+    @State var boolGameTeam = true
+    @State var errorArart = false
+    @State var gameId = ""
+    @State var openJoinView = false
     var body: some View {
         
         VStack {            
             
             NFCView()
-                
+            
             Button(action: {
                 createTeam.toggle()
             }, label: {
@@ -29,6 +34,7 @@ struct HomeView: View {
             .cornerRadius(10)
             
             Button(action: {
+                JoinTeam.toggle()
                 
             }, label: {
                 Text("チーム参加")
@@ -43,12 +49,49 @@ struct HomeView: View {
             .background(Color.mainColor)
             .cornerRadius(10)
             
+            //シュミレーターでやる人はこの辺のコード入ります
             
+//                        .onAppear(){
+//                            var savedata: UserDefaults = UserDefaults.standard
+//                            savedata.set(UUID().uuidString, forKey: "UserId")
+//                        }
             
             .sheet(isPresented: $createTeam) {
                 CreateTeamView(userId: "", gameId: "", picktime: "10", pickOni:  "1", gameMasterName: "")
             }
             
+            .alert("ゲームIDを入力", isPresented: $JoinTeam) {
+                TextField("ゲームID", text: $gameId)
+                
+                Button {
+                    
+                    Task {
+                        do{
+                            boolGameTeam =  try await viewModel.searchgame(gameId: gameId)
+                            if boolGameTeam == false{
+                                errorArart.toggle()
+                            }else{
+                                openJoinView.toggle()
+                            }
+                            
+                        }
+                    }
+                    
+                } label: {
+                    Text("OK")
+                }
+            }
+            .alert("ゲームIDが間違っています", isPresented: $errorArart) {
+                Button {
+                    
+                } label: {
+                    Text("OK")
+                }
+            }
+            .sheet(isPresented: $openJoinView){
+                JoinTeamView(userId: "", gameId: gameId, time: "", oni: "")
+                
+            }
         }
         
         
