@@ -33,6 +33,8 @@
 		9E37FC382BA32F07007835C7 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC332BA32F07007835C7 /* TimerViewModel.swift */; };
 		9E37FC392BA32F07007835C7 /* CircleProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */; };
 		9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC362BA32F07007835C7 /* TimerView.swift */; };
+		9E37FC412BA335CF007835C7 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC3F2BA335CF007835C7 /* MissionView.swift */; };
+		9E37FC422BA335CF007835C7 /* MissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC402BA335CF007835C7 /* MissionDetailView.swift */; };
 		9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */; };
 		9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D932B974E4F003CB854 /* Assets.xcassets */; };
 		9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D962B974E4F003CB854 /* Preview Assets.xcassets */; };
@@ -69,6 +71,8 @@
 		9E37FC332BA32F07007835C7 /* TimerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
 		9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressViewModel.swift; sourceTree = "<group>"; };
 		9E37FC362BA32F07007835C7 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		9E37FC3F2BA335CF007835C7 /* MissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		9E37FC402BA335CF007835C7 /* MissionDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionDetailView.swift; sourceTree = "<group>"; };
 		9E898D8C2B974E4E003CB854 /* kei-doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kei-doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeiDoroApp.swift; sourceTree = "<group>"; };
 		9E898D932B974E4F003CB854 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -262,6 +266,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		9E37FC3E2BA335CF007835C7 /* MissionPage */ = {
+			isa = PBXGroup;
+			children = (
+				9E37FC3F2BA335CF007835C7 /* MissionView.swift */,
+				9E37FC402BA335CF007835C7 /* MissionDetailView.swift */,
+			);
+			path = MissionPage;
+			sourceTree = "<group>";
+		};
 		9E898D832B974E4E003CB854 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +329,7 @@
 		9E898DE42B9ADEC4003CB854 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				9E37FC3E2BA335CF007835C7 /* MissionPage */,
 				9E37FC302BA32F07007835C7 /* TimerPage */,
 				9E37FC1D2BA32DA8007835C7 /* ChatPage */,
 				72029D372BA1F07700E37E62 /* MapPage */,
@@ -457,8 +471,10 @@
 			files = (
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
 				CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */,
+				9E37FC422BA335CF007835C7 /* MissionDetailView.swift in Sources */,
 				CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */,
 				9E37FC282BA32DA8007835C7 /* TableViewCell.swift in Sources */,
+				9E37FC412BA335CF007835C7 /* MissionView.swift in Sources */,
 				9E37FC1C2BA32CF6007835C7 /* PlayView.swift in Sources */,
 				9E37FC2B2BA32DA8007835C7 /* MessageInputAccesoryView.swift in Sources */,
 				9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */,
