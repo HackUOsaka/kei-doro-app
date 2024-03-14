@@ -181,6 +181,7 @@
 		9E898D9E2B97747C003CB854 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
+				728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */,
 				728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */,
 				9E898D9F2B97749D003CB854 /* Colors.swift */,
 			);
@@ -219,7 +220,6 @@
 		9E898DE92B9ADF76003CB854 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */,
 				9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */,
 			);
 			path = ViewModels;

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import FirebaseFirestore
 
 struct CreateTeamView: View {
     @ObservedObject var viewModel = CreateTeamViewModel()
@@ -15,9 +16,12 @@ struct CreateTeamView: View {
     @State var pickOni: String
     @State  var gameMasterName: String
     @State var gameStart = false
+    @State var users = [String]()
+    @State var names = [String]()
     let limits = ["10", "15", "20", "25", "30","35", "40", "45", "50", "55","60"]
     let onis = ["1","2","3","4","5"]
-
+    
+    
     var body: some View {
         VStack{
             HStack{
@@ -26,14 +30,18 @@ struct CreateTeamView: View {
                 
             }
             .padding()
-            Text(gameMasterName)
-                .foregroundColor(.white)
-                .frame(width: 50,height: 50)
-                .background(Color.mainColor)
-                .clipShape(Circle())
-                
-                .padding()
-              
+            HStack{
+                ForEach(users, id: \.hashValue){ user in
+                    Text(user)
+                        .foregroundColor(.white)
+                        .frame(width: 50,height: 50)
+                        .background(Color.mainColor)
+                        .clipShape(Circle())
+                    
+                        .padding()
+                }
+            }
+            
             Form {
                 
                 Picker("時間を選択", selection: $picktime) {
@@ -57,13 +65,23 @@ struct CreateTeamView: View {
         .onAppear(){
             Task{
                 do{
+                    gameMasterName = try await viewModel.makeIcon()
                     userId = try await viewModel.getUserId()
-                    gameId = try await viewModel.createGameId(userId: userId)
-                  gameMasterName =  try await viewModel.makeIcon()
+                    gameId = try await viewModel.createGameId(userId: userId, name: gameMasterName)
+                    
+                    try await  getUsers(gameId: gameId)
+                    
+                    
+                    
                     
                 }
             }
         }
+        
+        .onChange(of: users){
+            print("a")
+        }
+        
         .onChange(of: picktime){
             Task{
                 do{
@@ -86,6 +104,46 @@ struct CreateTeamView: View {
                 }
             }
         }
+        
     }
+    func getUsers(gameId: String)async throws{
+        var userName = [String]()
+        let db = Firestore.firestore()
+        
+        db.collection("games").document(gameId)
+            .addSnapshotListener { documentSnapshot, error in
+                guard let document = documentSnapshot else {
+                    print("Error fetching document: \(error!)")
+                    return
+                }
+                guard let data = document.data() else {
+                    print("Document data was empty.")
+                    return
+                }
+                let playerIds = data["names"] as![String]
+                
+                
+                print(playerIds)
+                
+                userName = []
+                users = []
+                
+                for name in playerIds{
+                    let index = name.startIndex
+                    let firstName = String(name[index])
+                    print(name)
+                    users.append(firstName)
+                }
+                
+                print("Current data: \(userName)")
+                
+                
+                
+                
+                
+            }
+        
+    }
+    
 }
 

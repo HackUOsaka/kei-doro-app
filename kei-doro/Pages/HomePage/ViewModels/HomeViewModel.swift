@@ -11,7 +11,7 @@ class HomeViewModel: ObservableObject {
     var savedata: UserDefaults = UserDefaults.standard
     let db = Firestore.firestore()
     
-    func searchgame(gameId: String) async throws -> Bool{
+    func searchgame(gameId: String, name: String) async throws -> Bool{
         let UserId = savedata.object(forKey: "UserId")
         var idArray = [String]()
         let ref = try await db.collection("games").getDocuments()
@@ -23,7 +23,8 @@ class HomeViewModel: ObservableObject {
         }
         if idArray.contains(gameId){
          try await db.collection("games").document(gameId).updateData([
-                "playerIds": FieldValue.arrayUnion([UserId])
+            "playerIds": FieldValue.arrayUnion([UserId]),
+            "names":  FieldValue.arrayUnion([name])
             ])
             return true
         }else{
@@ -31,5 +32,15 @@ class HomeViewModel: ObservableObject {
         }
        
     }
+    func makeIcon() async throws -> String{
+        let UserId = savedata.object(forKey: "UserId")
+        let document = try await db.collection("users").document(UserId as! String).getDocument()
+        let data = document.data()
+        let name = data?["name"] as! String
+       
+        
+        return name
+    }
+    
 }
 
