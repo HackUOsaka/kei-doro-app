@@ -1,40 +1,49 @@
+//
+//  TimerView.swift
+//  kei-doro
+//
+//  Created by 大澤清乃 on 2024/03/16.
+//
 
- import SwiftUI
- import Combine
+import SwiftUI
 
- struct TimerView: View {
-     var body: some View {
-         CircleProgressView()
-     }
- }
+struct TimerView: View {
+    @EnvironmentObject var timeManager: TimeManager
 
- struct CircleProgressView: View {
-     @StateObject var viewModel = CircleProgressViewModel()
-     var body: some View {
-         ZStack {
-             Circle()
-                 .stroke(
-                     Color.secondColor,
-                     style: StrokeStyle(
-                         lineWidth: 15,
-                         lineCap: .round)
-                 )
-                 .opacity(0.5)
-                 .frame(width: 300, height: 300)
-             Circle()
-                 .trim(from: 0.0, to: viewModel.progressValue) // toの値をViewModelのprogressValueを参照する
-                 .stroke(
-                     Color.mainColor,
-                     style: StrokeStyle(
-                         lineWidth: 15,
-                         lineCap: .round)
-                 )
-                 .frame(width: 300, height: 300)
-                 .rotationEffect(Angle(degrees: -90))
-         }
-     }
- }
+    let screenWidth = UIScreen.main.bounds.width
+    let screenHeight = UIScreen.main.bounds.height
+    
+    var body: some View {
+        ZStack {
+            //時間表示形式が時間、分、秒によって、タイマーの文字サイズを条件分岐させる
+            //表示形式が"時間"の場合
+            if self.timeManager.displayedTimeFormat == .hr {
+                Text(self.timeManager.displayTimer())
+                //文字サイズをスクリーンサイズ x 0.15に指定
+                    .font(.system(size: self.screenWidth * 0.15, weight: .thin, design: .monospaced))
+                //念の為、行数を1行に指定
+                    .lineLimit(1)
+                //デフォルトの余白を追加
+                    .padding()
+                //表示形式が"分"の場合
+            } else if self.timeManager.displayedTimeFormat == .min {
+                Text(self.timeManager.displayTimer())
+                    .font(.system(size: self.screenWidth * 0.23, weight: .thin, design: .monospaced))
+                    .lineLimit(1)
+                    .padding()
+                //表示形式が"秒"の場合
+            } else {
+                Text(self.timeManager.displayTimer())
+                    .font(.system(size: self.screenWidth * 0.5, weight: .thin, design: .monospaced))
+                    .lineLimit(1)
+                    .padding()
+            }
+        }
+    }
+}
 
- #Preview {
-     TimerView()
- }
+#Preview {
+    TimerView()
+        .environmentObject(TimerManager())
+        .previewLayout(.sizeThatFits)
+}

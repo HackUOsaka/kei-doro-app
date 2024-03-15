@@ -9,12 +9,14 @@ import SwiftUI
 import FirebaseFirestore
 
 struct CreateTeamView: View {
+    @EnvironmentObject var timeManager: TimeManager
+
     @ObservedObject var viewModel = CreateTeamViewModel()
     @State var userId: String
     @State var gameId: String
     @State var picktime: String
     @State var pickOni: String
-    @State  var gameMasterName: String
+    @State var gameMasterName: String
     @State var gameStart = false
     @State var users = [String]()
     @State var names = [String]()
