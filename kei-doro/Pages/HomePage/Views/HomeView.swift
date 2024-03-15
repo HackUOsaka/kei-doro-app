@@ -18,52 +18,30 @@ struct HomeView: View {
     @State var name = ""
     var body: some View {
         
-        VStack {            
-            
-            NFCView()
-            
-            Button(action: {
-                createTeam.toggle()
-            }, label: {
-                Text("チーム作成")
-            })
-            .bold()
-            .padding()
-            .frame(width: 200, height: 100)
-            .foregroundColor(Color.black)
-            .background(Color.pink)
-            .cornerRadius(10)
-            
-            Button(action: {
-                JoinTeam.toggle()
-                
-            }, label: {
-                Text("チーム参加")
-            })
-            
-            
-            
-            .bold()
-            .padding()
-            .frame(width: 200, height: 100)
-            .foregroundColor(Color.black)
-            .background(Color.mainColor)
-            .cornerRadius(10)
-            
-       
-            
-            .sheet(isPresented: $createTeam) {
-                CreateTeamView(userId: "", gameId: "", picktime: "10", pickOni:  "1", gameMasterName: "")
+        ZStack {
+            Color.backColor
+                .ignoresSafeArea()
+            VStack {
+                Spacer()
+                    .overlay(
+                        VStack{
+                            userButton()
+                                .padding(.top, 16)
+                            Spacer()
+                        }
+                    )
+                VStack {
+                    toCreateTeamPage()
+                    toPlayPage()
+                }
+                Spacer()
             }
-            
             .alert("ゲームIDを入力", isPresented: $JoinTeam) {
                 TextField("ゲームID", text: $gameId)
-                
                 Button {
-                    
                     Task {
                         do{
-                           name = try await viewModel.makeIcon()
+                            name = try await viewModel.makeIcon()
                             boolGameTeam =  try await viewModel.searchgame(gameId: gameId, name: name)
                             if boolGameTeam == false{
                                 errorArart.toggle()
@@ -78,9 +56,9 @@ struct HomeView: View {
                     Text("OK")
                 }
             }
+            
             .alert("ゲームIDが間違っています", isPresented: $errorArart) {
                 Button {
-                    
                 } label: {
                     Text("OK")
                 }
@@ -92,11 +70,72 @@ struct HomeView: View {
         }
         
         
+        
         //
         ////  NavigationLink(destionation: ) {
         //        Text("GAMEに参加する").bold().padding().frame(width: 200, height: 100).foregroundColor(Color.black).background(Color.mainColor).cornerRadius(10)
         //
         
+    }
+}
+
+struct userButton: View {
+    var body: some View {
+        Button(action: {
+            print()
+        }, label: {
+            Image(systemName: "person.circle")
+                .font(.system(size: 40))
+                .foregroundColor(Color.secondColor)
+                .frame(width: 320, height: 72, alignment: .trailing)
+        })
+    }
+}
+
+struct toCreateTeamPage: View {
+    @State var createTeam = false
+    
+    var body: some View {
+        Button(action: {
+            createTeam.toggle()
+        }, label: {
+            Text("チーム作成")
+        })
+        .font(.system(size: 22))
+        //            .bold()
+        .foregroundColor(.white)
+        .frame(width: 320, height: 72)
+        .background(Color.secondColor)
+        .cornerRadius(5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(Color.mainColor, lineWidth: 2))
+        .padding(.bottom, 40)
+    }
+}
+
+struct toPlayPage: View {
+    @State var JoinTeam = false
+    @State var createTeam = false
+    
+    var body: some View {
+        Button(action: {
+            JoinTeam.toggle()
+        }, label: {
+            Text("IDを入力")
+        })
+        .font(.system(size: 22))
+        .foregroundColor(.white)
+        .frame(width: 320, height: 72)
+        .background(Color.secondColor)
+        .cornerRadius(5)
+        .overlay(
+            RoundedRectangle(cornerRadius: 5)
+                .stroke(Color.mainColor, lineWidth: 2)
+        )
+        .sheet(isPresented: $createTeam) {
+            CreateTeamView(userId: "", gameId: "", picktime: "10", pickOni:  "1", gameMasterName: "")
+        }
     }
 }
 #Preview {
