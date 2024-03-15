@@ -55,7 +55,7 @@ struct MissionButton: View {
                         .stroke(Color.secondColor, lineWidth: 1))
         })
         .sheet(isPresented: $toMissionView, content: {
-            MissionView()
+    //        MissionView()
         })
     }
 }

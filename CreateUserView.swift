@@ -57,6 +57,11 @@ struct CreateUserView: View {
                 }) {
                     Text("ユーザーを登録する")
                 }
+                Button(action: {
+                    
+                }, label: {
+                    Text("NFC書き込み")
+                })
             }
         }
     }
