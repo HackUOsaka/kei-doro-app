@@ -53,20 +53,20 @@ struct NFCView: View {
         }
         //シュミレーターでやる人はこの辺のコード入ります
         
-//        .onAppear(){
-//            var savedata: UserDefaults = UserDefaults.standard
-//            let random = UUID().uuidString
-//            savedata.set(random, forKey: "UserId")
-//            
-//            Task{
-//                do{
-//                    try await viewModel.saveUserId(UserId: random)
-//                }
-//                catch{
-//                    print(error)
-//                }
-//            }
-//        }
+        .onAppear(){
+     
+            let random = UUID().uuidString
+        //    savedata.set(random, forKey: "UserId")
+            
+            Task{
+                do{
+                    try await viewModel.saveUserId(UserId: random)
+                }
+                catch{
+                    print(error)
+                }
+            }
+        }
     }
     
 }

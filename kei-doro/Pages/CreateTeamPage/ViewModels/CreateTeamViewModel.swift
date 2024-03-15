@@ -14,7 +14,7 @@ class CreateTeamViewModel: ObservableObject {
     
     func makeIcon() async throws -> String{
         let UserId = savedata.object(forKey: "UserId")
-        let document = try await db.collection("users").document(UserId as! String).getDocument()
+        let document = try await db.collection("users").document(UserId as! String ).getDocument()
         let data = document.data()
         let name = data?["name"] as! String
         
@@ -34,7 +34,7 @@ class CreateTeamViewModel: ObservableObject {
             "oni": "1",
             "limit": "10"])
         
-        
+        savedata.set(gameId, forKey: "GameId")    
         return gameId
     }
     

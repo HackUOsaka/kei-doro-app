@@ -11,17 +11,29 @@ import CoreLocation
 
 
 struct MapView: View {
-   @Namespace var mapScope
+    @Namespace var mapScope
+    @StateObject var viewModel = MapViewModel()
     @State var position: MapCameraPosition = .userLocation(fallback: .automatic)
-    @StateObject private var locationManager = LocationManager()
+    let  manager = CLLocationManager()
+    @ObservedObject var locationManager = LocationManager()
+    @State private var region = MKCoordinateRegion()
+  
+    var savedata: UserDefaults = UserDefaults.standard
+    @State  var annotationArray = [MKAnnotation]()
+    @State private var customAnnotations: [CustomAnnotation] = []
+
+
+
     
     var body: some View {
-      //  position = .userLocation(fallback: .automatic)
-        Map(position: $position){
-      
-            
-            UserAnnotation()
+        
+        Map(position: $position) {
+            ForEach(customAnnotations) { customAnnotation in
+                Marker("a", coordinate: customAnnotation.annotation.coordinate)
+                    .tint(.blue)
+            }
         }
+
         .mapControls {
             MapPitchToggle()
             MapUserLocationButton()
@@ -31,26 +43,42 @@ struct MapView: View {
         .onAppear {
             locationManager.startUpdating()
         }
-        
-        
-        
-        
-        
-        
-    }
-    
-}
-extension CLLocationCoordinate2D {
-    static var userLocation: CLLocationCoordinate2D {
-        return .init(latitude: 25.7602, longitude: -80.1959)
-    }
-}
-    extension MKCoordinateRegion {
-        static var userRegion: MKCoordinateRegion{
-            
-            return .init(center: .userLocation,
-                         latitudinalMeters: 10000,
-                         longitudinalMeters: 10000)
+        Button(action: {
+            let UserId = savedata.object(forKey: "UserId")
+            let gameId = savedata.object(forKey: "GameId")
+            Task{
+                do{
+                    try await  viewModel.reloadRegion(gameId: gameId as! String, userId: UserId as! String)
+                 annotationArray = try await viewModel.addlocation(gameId: gameId as! String)
+                    //anotation全部消す
+                    for annotation in annotationArray {
+                                customAnnotations.append(CustomAnnotation(annotation: annotation))
+                            }
+                    
+                    print(annotationArray)
+                    
+                }
+            }
+          
+        }, label: {
+            Text("位置情報更新")
+        })
+        .onAppear(){
+            let UserId = savedata.object(forKey: "UserId")
+            let gameId = savedata.object(forKey: "GameId")
+            Task{
+                do{
+                   try await viewModel.setRegion(gameId: gameId as! String, userId: UserId as! String)
+                }
+            }
+        //    gameId = try await viewModel.createGameId(userId: userId, name: gameMasterName)
         }
+        
     }
     
+}
+
+struct CustomAnnotation: Identifiable {
+    let id = UUID()
+    let annotation: MKAnnotation
+}
