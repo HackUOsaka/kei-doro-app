@@ -33,7 +33,7 @@ struct PlayView: View {
                     })
                     ZStack(alignment: .center){
                         TimerView()
-                  //      ProgressBarView()
+                      ProgressBarView()
                     }.padding(.all, 40)
                 }
                 Spacer()
