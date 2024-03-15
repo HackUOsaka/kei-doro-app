@@ -115,6 +115,31 @@ struct getTestNFC: View {
             Text("テスト用NFC書き込み")
                 .foregroundStyle(Color.secondColor)
         })
+// <<<<<<< feature/#56-NFCView
+// =======
+//         .alert(isPresented: $isAlertShown) {
+//             Alert(
+//                 title: Text(""),
+//                 message: Text(alertMessage),
+//                 dismissButton: .default(Text("OK")))
+//         }
+//         //シュミレーターでやる人はこの辺のコード入ります
+        
+//         .onAppear(){
+     
+//             let random = UUID().uuidString
+//         //    savedata.set(random, forKey: "UserId")
+            
+//             Task{
+//                 do{
+//                     try await viewModel.saveUserId(UserId: random)
+//                 }
+//                 catch{
+//                     print(error)
+//                 }
+//             }
+//         }
+// >>>>>>> master
     }
 }
 
