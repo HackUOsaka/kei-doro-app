@@ -30,12 +30,12 @@ class MapViewModel: ObservableObject {
                 latitudinalMeters: 1000.0,
                 longitudinalMeters: 1000.0
             )
-       let geoPoint = GeoPoint(latitude: location.coordinate.latitude, longitude:  location.coordinate.longitude)
-          
+            let geoPoint = GeoPoint(latitude: location.coordinate.latitude, longitude:  location.coordinate.longitude)
+            
             try await db.collection("games").document(gameId).collection("players").document(userId).updateData([
                 "location": geoPoint
             ])
-
+            
         }
     }
     func setRegion(gameId: String, userId: String) async throws{
@@ -51,17 +51,17 @@ class MapViewModel: ObservableObject {
                 latitudinalMeters: 1000.0,
                 longitudinalMeters: 1000.0
             )
-       let geoPoint = GeoPoint(latitude: location.coordinate.latitude, longitude:  location.coordinate.longitude)
-          
+            let geoPoint = GeoPoint(latitude: location.coordinate.latitude, longitude:  location.coordinate.longitude)
+            
             try await db.collection("games").document(gameId).collection("players").document(userId).setData([
                 "location": geoPoint
             ])
-
+            
         }
     }
     func addlocation(gameId: String)async throws -> Array<MKAnnotation>{
         var annotationArray = [MKAnnotation]()
-       let ref =  try await db.collection("games").document(gameId).collection("players").getDocuments()
+        let ref =  try await db.collection("games").document(gameId).collection("players").getDocuments()
         for document in ref.documents {
             let data = document.data()
             let location = data["location"]
@@ -75,5 +75,5 @@ class MapViewModel: ObservableObject {
         return annotationArray
     }
     
-
+    
 }
