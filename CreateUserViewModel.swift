@@ -13,9 +13,10 @@ class CreateUserViewModel: ObservableObject {
     let db = Firestore.firestore()
     var newUser: [User] = []
     let saveData: UserDefaults = UserDefaults.standard
+    let userId = UUID().uuidString
 
     func createUser(name: String, completion: @escaping (Result<User, Error>) -> Void) {
-        let userId = UUID().uuidString
+       
         let userData = User(userId: userId, name: name, password: "あああああ")
         self.newUser.append(userData)
         

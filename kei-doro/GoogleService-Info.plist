@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAY8oh_ozVgkm5WD3c8gx0jcqRssGKz7lQ</string>
+	<key>GCM_SENDER_ID</key>
+	<string>492072722141</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>app.inoue.inoren.kei-doro2</string>
+	<key>PROJECT_ID</key>
+	<string>ulpori</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ulpori.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:492072722141:ios:78f6d45e870c4b13140534</string>
+</dict>
+</plist>

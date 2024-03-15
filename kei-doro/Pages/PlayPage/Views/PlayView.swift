@@ -3,6 +3,7 @@ import SwiftUI
 
 struct PlayView: View {
     @EnvironmentObject var timeManager: TimeManager
+    @StateObject var session = NFCSession()
     //    @ObservedObject var gameId: Model
     //ここも編集する！
     let role: Bool = true
@@ -28,9 +29,12 @@ struct PlayView: View {
                             DoroTimerLabel()
                         }
                     }
+                    Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                        /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                    })
                     ZStack(alignment: .center){
                         TimerView()
-                        ProgressBarView()
+                      ProgressBarView()
                     }.padding(.all, 40)
                 }
                 Spacer()
@@ -50,6 +54,21 @@ struct PlayView: View {
                             MissionButton()
                         }
                     }
+                    Spacer()
+                    Button(action: {
+                        session.startReadSession { text, error in
+                            if let error = error {
+                                print(error)
+                            }else{
+                          //textがuseridです
+                            }
+                        }
+                    }, label: {
+                        Text("捕まえた")
+                    })
+                   
+                        
+                    
                     Spacer()
                     CallButton()
                     Spacer()
