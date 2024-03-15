@@ -17,7 +17,6 @@ struct MissionView: View {
                     NavigationBarView()
                         .padding(.vertical, 24)
                 }
-                MissionList()
             }
         }
     }
@@ -47,43 +46,11 @@ struct NavigationBarView: View {
     }
 }
 
-struct MissionList: View {
-    var body: some View {
-        NavigationLink(destination: MissionData()) {
-            List(0..<2, id: \.self) { index in
-                MissionData()
-                    .padding(.all, 8)
-                    .listRowBackground(Color.secondColor)
-            }
-        }
-        .scrollContentBackground(.hidden)
-    }
-}
-
-struct MissionData: View {
-//    @State var showMissionDetail: Bool = false
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading, content: {
-                Text("case1:")
-                    .padding(.bottom, 8)
-                Text("〇〇で△△してください")
-            })
-            Spacer()
-            Text("失敗")
-                .font(.system(size: 22))
-                .fontWeight(.bold)
-                .foregroundStyle(Color.errorColor)
-                .padding(.trailing, 8)
-        }
-//        .onTapGesture {
-//            self.showMissionDetail = true
-//        }
-//        .sheet(isPresented: $showMissionDetail, content: {
-//            MissionDetailView()
-//        })
-    }
-}
+//struct missionDetailVIew: View {
+//    var body: some View {
+//
+//    }
+//}
 
 #Preview {
     MissionView()
