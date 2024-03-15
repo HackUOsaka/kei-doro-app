@@ -31,8 +31,39 @@ struct HomeView: View {
                         }
                     )
                 VStack {
-                    toCreateTeamPage()
-                    toPlayPage()
+                    Button(action: {
+                        createTeam.toggle()
+                    }, label: {
+                        Text("チーム作成")
+                    })
+                    .font(.system(size: 22))
+                    //            .bold()
+                    .foregroundColor(.white)
+                    .frame(width: 320, height: 72)
+                    .background(Color.secondColor)
+                    .cornerRadius(5)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.mainColor, lineWidth: 2))
+                    .padding(.bottom, 40)
+                    
+                    Button(action: {
+                        JoinTeam.toggle()
+                    }, label: {
+                        Text("IDを入力")
+                    })
+                    .font(.system(size: 22))
+                    .foregroundColor(.white)
+                    .frame(width: 320, height: 72)
+                    .background(Color.secondColor)
+                    .cornerRadius(5)
+                    .overlay(
+                        RoundedRectangle(cornerRadius: 5)
+                            .stroke(Color.mainColor, lineWidth: 2)
+                    )
+                    .sheet(isPresented: $createTeam) {
+                        CreateTeamView(userId: "", gameId: "", picktime: "10", pickOni:  "1", gameMasterName: "")
+                    }
                 }
                 Spacer()
             }
@@ -92,52 +123,6 @@ struct userButton: View {
     }
 }
 
-struct toCreateTeamPage: View {
-    @State var createTeam = false
-    
-    var body: some View {
-        Button(action: {
-            createTeam.toggle()
-        }, label: {
-            Text("チーム作成")
-        })
-        .font(.system(size: 22))
-        //            .bold()
-        .foregroundColor(.white)
-        .frame(width: 320, height: 72)
-        .background(Color.secondColor)
-        .cornerRadius(5)
-        .overlay(
-            RoundedRectangle(cornerRadius: 5)
-                .stroke(Color.mainColor, lineWidth: 2))
-        .padding(.bottom, 40)
-    }
-}
-
-struct toPlayPage: View {
-    @State var JoinTeam = false
-    @State var createTeam = false
-    
-    var body: some View {
-        Button(action: {
-            JoinTeam.toggle()
-        }, label: {
-            Text("IDを入力")
-        })
-        .font(.system(size: 22))
-        .foregroundColor(.white)
-        .frame(width: 320, height: 72)
-        .background(Color.secondColor)
-        .cornerRadius(5)
-        .overlay(
-            RoundedRectangle(cornerRadius: 5)
-                .stroke(Color.mainColor, lineWidth: 2)
-        )
-        .sheet(isPresented: $createTeam) {
-            CreateTeamView(userId: "", gameId: "", picktime: "10", pickOni:  "1", gameMasterName: "")
-        }
-    }
-}
 #Preview {
     HomeView()
 }

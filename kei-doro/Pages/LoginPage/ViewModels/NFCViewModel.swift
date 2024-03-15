@@ -17,7 +17,5 @@ class NFCViewModel: ObservableObject {
                 "password": "password"])
            
         }
-        savedata.set(userId, forKey: "UserId")       
-
     }
 }
