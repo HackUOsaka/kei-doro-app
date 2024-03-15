@@ -45,6 +45,8 @@
 		9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */; };
 		CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */; };
 		CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */; };
+		CEBD06B12BA410D400F0844E /* MissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD06AE2BA410D400F0844E /* MissionDetailView.swift */; };
+		CEBD06B22BA410D400F0844E /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD06AF2BA410D400F0844E /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -86,6 +88,8 @@
 		9E898DEC2B9AE028003CB854 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		CEBD06AE2BA410D400F0844E /* MissionDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionDetailView.swift; sourceTree = "<group>"; };
+		CEBD06AF2BA410D400F0844E /* MissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -332,7 +336,6 @@
 		9E898DE42B9ADEC4003CB854 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				723BDA102BA341D50008210F /* MissionPage */,
 				9E37FC302BA32F07007835C7 /* TimerPage */,
 				9E37FC1D2BA32DA8007835C7 /* ChatPage */,
 				72029D372BA1F07700E37E62 /* MapPage */,
@@ -386,6 +389,15 @@
 				9E37FC192BA32CF6007835C7 /* PlayView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		CEBD06B02BA410D400F0844E /* MissionPage */ = {
+			isa = PBXGroup;
+			children = (
+				CEBD06AE2BA410D400F0844E /* MissionDetailView.swift */,
+				CEBD06AF2BA410D400F0844E /* MissionView.swift */,
+			);
+			path = MissionPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -481,6 +493,7 @@
 				9E37FC1C2BA32CF6007835C7 /* PlayView.swift in Sources */,
 				9E37FC2B2BA32DA8007835C7 /* MessageInputAccesoryView.swift in Sources */,
 				9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */,
+				CEBD06B22BA410D400F0844E /* MissionView.swift in Sources */,
 				72029D3B2BA1F09C00E37E62 /* MapView.swift in Sources */,
 				9E37FC1A2BA32CF6007835C7 /* DoroPlayView.swift in Sources */,
 				9E37FC382BA32F07007835C7 /* TimerViewModel.swift in Sources */,
@@ -493,6 +506,7 @@
 				9E37FC372BA32F07007835C7 /* EndTimePickerViewModel.swift in Sources */,
 				9E37FC392BA32F07007835C7 /* CircleProgressViewModel.swift in Sources */,
 				9E37FC262BA32DA8007835C7 /* ChatViewController.swift in Sources */,
+				CEBD06B12BA410D400F0844E /* MissionDetailView.swift in Sources */,
 				728A4D282BA173E200CAFD73 /* JoinTeamView.swift in Sources */,
 				72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */,
 				723BDA0A2BA1F3DA0008210F /* LocationManager.swift in Sources */,
