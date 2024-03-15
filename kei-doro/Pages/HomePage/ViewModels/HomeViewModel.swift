@@ -23,9 +23,10 @@ class HomeViewModel: ObservableObject {
         }
         if idArray.contains(gameId){
          try await db.collection("games").document(gameId).updateData([
-            "playerIds": FieldValue.arrayUnion([UserId]),
+            "playerIds": FieldValue.arrayUnion([UserId as Any]),
             "names":  FieldValue.arrayUnion([name])
             ])
+            savedata.set(gameId, forKey: "GameId")   
             return true
         }else{
             return false
@@ -38,7 +39,6 @@ class HomeViewModel: ObservableObject {
         let data = document.data()
         let name = data?["name"] as! String
        
-        
         return name
     }
     

@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72029D352BA18FE400E37E62 /* JoinTeamViewModel.swift */; };
 		72029D3B2BA1F09C00E37E62 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72029D3A2BA1F09C00E37E62 /* MapView.swift */; };
-		723BDA0A2BA1F3DA0008210F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA092BA1F3DA0008210F /* MapViewModel.swift */; };
+		723BDA0A2BA1F3DA0008210F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA092BA1F3DA0008210F /* LocationManager.swift */; };
+		723BDA132BA341D50008210F /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA112BA341D50008210F /* MissionView.swift */; };
+		723BDA142BA341D50008210F /* MissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA122BA341D50008210F /* MissionDetailView.swift */; };
+		723BDA162BA343D90008210F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA152BA343D90008210F /* MapViewModel.swift */; };
 		728A4CBF2B9ED6C700CAFD73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */; };
 		728A4CDA2B9EDA6B00CAFD73 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CD92B9EDA6B00CAFD73 /* FirebaseFirestore */; };
 		728A4CDC2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDB2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community */; };
@@ -50,7 +53,10 @@
 		72029D352BA18FE400E37E62 /* JoinTeamViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTeamViewModel.swift; sourceTree = "<group>"; };
 		72029D3A2BA1F09C00E37E62 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		72029D3C2BA1F13600E37E62 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		723BDA092BA1F3DA0008210F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		723BDA092BA1F3DA0008210F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		723BDA112BA341D50008210F /* MissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
+		723BDA122BA341D50008210F /* MissionDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionDetailView.swift; sourceTree = "<group>"; };
+		723BDA152BA343D90008210F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
 		728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "kei-doro.entitlements"; sourceTree = "<group>"; };
 		728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSession.swift; sourceTree = "<group>"; };
@@ -121,9 +127,19 @@
 		72029D392BA1F08A00E37E62 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				723BDA092BA1F3DA0008210F /* MapViewModel.swift */,
+				723BDA092BA1F3DA0008210F /* LocationManager.swift */,
+				723BDA152BA343D90008210F /* MapViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		723BDA102BA341D50008210F /* MissionPage */ = {
+			isa = PBXGroup;
+			children = (
+				723BDA112BA341D50008210F /* MissionView.swift */,
+				723BDA122BA341D50008210F /* MissionDetailView.swift */,
+			);
+			path = MissionPage;
 			sourceTree = "<group>";
 		};
 		728A4CFD2BA08ED500CAFD73 /* HomePage */ = {
@@ -320,7 +336,6 @@
 		9E898DE42B9ADEC4003CB854 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
-				CEBD06B02BA410D400F0844E /* MissionPage */,
 				9E37FC302BA32F07007835C7 /* TimerPage */,
 				9E37FC1D2BA32DA8007835C7 /* ChatPage */,
 				72029D372BA1F07700E37E62 /* MapPage */,
@@ -471,8 +486,10 @@
 			files = (
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
 				CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */,
+				723BDA142BA341D50008210F /* MissionDetailView.swift in Sources */,
 				CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */,
 				9E37FC282BA32DA8007835C7 /* TableViewCell.swift in Sources */,
+				723BDA132BA341D50008210F /* MissionView.swift in Sources */,
 				9E37FC1C2BA32CF6007835C7 /* PlayView.swift in Sources */,
 				9E37FC2B2BA32DA8007835C7 /* MessageInputAccesoryView.swift in Sources */,
 				9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */,
@@ -492,9 +509,10 @@
 				CEBD06B12BA410D400F0844E /* MissionDetailView.swift in Sources */,
 				728A4D282BA173E200CAFD73 /* JoinTeamView.swift in Sources */,
 				72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */,
-				723BDA0A2BA1F3DA0008210F /* MapViewModel.swift in Sources */,
+				723BDA0A2BA1F3DA0008210F /* LocationManager.swift in Sources */,
 				9E898DA02B97749D003CB854 /* Colors.swift in Sources */,
 				728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */,
+				723BDA162BA343D90008210F /* MapViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -629,7 +647,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"kei-doro/Preview Content\"";
-				DEVELOPMENT_TEAM = R3Q2SUPNB2;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "kei-doro/Info.plist";
@@ -663,7 +681,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"kei-doro/Preview Content\"";
-				DEVELOPMENT_TEAM = R3Q2SUPNB2;
+				DEVELOPMENT_TEAM = TVH687AC7F;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "kei-doro/Info.plist";
