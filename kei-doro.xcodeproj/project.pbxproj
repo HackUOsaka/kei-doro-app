@@ -10,10 +10,15 @@
 		72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72029D352BA18FE400E37E62 /* JoinTeamViewModel.swift */; };
 		72029D3B2BA1F09C00E37E62 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72029D3A2BA1F09C00E37E62 /* MapView.swift */; };
 		723BDA0A2BA1F3DA0008210F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA092BA1F3DA0008210F /* LocationManager.swift */; };
-		723BDA132BA341D50008210F /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA112BA341D50008210F /* MissionView.swift */; };
-		723BDA142BA341D50008210F /* MissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA122BA341D50008210F /* MissionDetailView.swift */; };
 		723BDA162BA343D90008210F /* MapViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA152BA343D90008210F /* MapViewModel.swift */; };
-		728A4CBF2B9ED6C700CAFD73 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */; };
+		723BDA192BA4F2C70008210F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 723BDA182BA4F2C70008210F /* GoogleService-Info.plist */; };
+		723BDA1D2BA4F2F50008210F /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA1A2BA4F2F50008210F /* TimerManager.swift */; };
+		723BDA1E2BA4F2F50008210F /* TimeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA1B2BA4F2F50008210F /* TimeManager.swift */; };
+		723BDA1F2BA4F2F50008210F /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA1C2BA4F2F50008210F /* Data.swift */; };
+		723BDA232BA4F4A80008210F /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA222BA4F4A80008210F /* SignUpView.swift */; };
+		723BDA282BA4F5290008210F /* CreateUserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA272BA4F5290008210F /* CreateUserView.swift */; };
+		723BDA2A2BA4F5310008210F /* CreateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA292BA4F5310008210F /* CreateUserViewModel.swift */; };
+		723BDA2D2BA4F5810008210F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 723BDA2C2BA4F5810008210F /* User.swift */; };
 		728A4CDA2B9EDA6B00CAFD73 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CD92B9EDA6B00CAFD73 /* FirebaseFirestore */; };
 		728A4CDC2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDB2B9EDA6B00CAFD73 /* FirebaseFirestoreCombine-Community */; };
 		728A4CDE2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 728A4CDD2B9EDA6B00CAFD73 /* FirebaseFirestoreSwift */; };
@@ -32,9 +37,6 @@
 		9E37FC2B2BA32DA8007835C7 /* MessageInputAccesoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC232BA32DA8007835C7 /* MessageInputAccesoryView.swift */; };
 		9E37FC2C2BA32DA8007835C7 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC252BA32DA8007835C7 /* ChatView.swift */; };
 		9E37FC2F2BA32E72007835C7 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 9E37FC2E2BA32E72007835C7 /* FirebaseAuth */; };
-		9E37FC372BA32F07007835C7 /* EndTimePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC322BA32F07007835C7 /* EndTimePickerViewModel.swift */; };
-		9E37FC382BA32F07007835C7 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC332BA32F07007835C7 /* TimerViewModel.swift */; };
-		9E37FC392BA32F07007835C7 /* CircleProgressViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */; };
 		9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E37FC362BA32F07007835C7 /* TimerView.swift */; };
 		9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */; };
 		9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E898D932B974E4F003CB854 /* Assets.xcassets */; };
@@ -45,8 +47,6 @@
 		9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E898DEA2B9ADF9A003CB854 /* NFCViewModel.swift */; };
 		CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A62BA0A1870013A2E2 /* HomeViewModel.swift */; };
 		CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0228A82BA0A1AC0013A2E2 /* HomeView.swift */; };
-		CEBD06B12BA410D400F0844E /* MissionDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD06AE2BA410D400F0844E /* MissionDetailView.swift */; };
-		CEBD06B22BA410D400F0844E /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBD06AF2BA410D400F0844E /* MissionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,8 +57,15 @@
 		723BDA112BA341D50008210F /* MissionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		723BDA122BA341D50008210F /* MissionDetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MissionDetailView.swift; sourceTree = "<group>"; };
 		723BDA152BA343D90008210F /* MapViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewModel.swift; sourceTree = "<group>"; };
+		723BDA182BA4F2C70008210F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		723BDA1A2BA4F2F50008210F /* TimerManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
+		723BDA1B2BA4F2F50008210F /* TimeManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeManager.swift; sourceTree = "<group>"; };
+		723BDA1C2BA4F2F50008210F /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		723BDA222BA4F4A80008210F /* SignUpView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		723BDA272BA4F5290008210F /* CreateUserView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserView.swift; sourceTree = SOURCE_ROOT; };
+		723BDA292BA4F5310008210F /* CreateUserViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateUserViewModel.swift; sourceTree = SOURCE_ROOT; };
+		723BDA2C2BA4F5810008210F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "kei-doro.entitlements"; sourceTree = "<group>"; };
-		728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		728A4CFB2B9F2F8200CAFD73 /* NFCSession.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NFCSession.swift; sourceTree = "<group>"; };
 		728A4D202BA168F300CAFD73 /* CreateTeamView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTeamView.swift; sourceTree = "<group>"; };
 		728A4D222BA16E2800CAFD73 /* CreateTeamViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateTeamViewModel.swift; sourceTree = "<group>"; };
@@ -73,9 +80,6 @@
 		9E37FC222BA32DA8007835C7 /* TableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		9E37FC232BA32DA8007835C7 /* MessageInputAccesoryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageInputAccesoryView.swift; sourceTree = "<group>"; };
 		9E37FC252BA32DA8007835C7 /* ChatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
-		9E37FC322BA32F07007835C7 /* EndTimePickerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndTimePickerViewModel.swift; sourceTree = "<group>"; };
-		9E37FC332BA32F07007835C7 /* TimerViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
-		9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleProgressViewModel.swift; sourceTree = "<group>"; };
 		9E37FC362BA32F07007835C7 /* TimerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		9E898D8C2B974E4E003CB854 /* kei-doro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kei-doro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E898D8F2B974E4E003CB854 /* KeiDoroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeiDoroApp.swift; sourceTree = "<group>"; };
@@ -133,13 +137,64 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		723BDA102BA341D50008210F /* MissionPage */ = {
+		723BDA172BA4F13A0008210F /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
-				723BDA112BA341D50008210F /* MissionView.swift */,
 				723BDA122BA341D50008210F /* MissionDetailView.swift */,
+				723BDA112BA341D50008210F /* MissionView.swift */,
+				CEBD06AF2BA410D400F0844E /* MissionView.swift */,
+				CEBD06AE2BA410D400F0844E /* MissionDetailView.swift */,
 			);
-			path = MissionPage;
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
+		723BDA202BA4F4A80008210F /* SignUpPage */ = {
+			isa = PBXGroup;
+			children = (
+				723BDA212BA4F4A80008210F /* Views */,
+			);
+			path = SignUpPage;
+			sourceTree = "<group>";
+		};
+		723BDA212BA4F4A80008210F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				723BDA222BA4F4A80008210F /* SignUpView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		723BDA242BA4F5070008210F /* CreateUserPage */ = {
+			isa = PBXGroup;
+			children = (
+				723BDA262BA4F51F0008210F /* ViewModels */,
+				723BDA252BA4F5180008210F /* Views */,
+			);
+			path = CreateUserPage;
+			sourceTree = "<group>";
+		};
+		723BDA252BA4F5180008210F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				723BDA272BA4F5290008210F /* CreateUserView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		723BDA262BA4F51F0008210F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				723BDA292BA4F5310008210F /* CreateUserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		723BDA2B2BA4F5810008210F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				723BDA2C2BA4F5810008210F /* User.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		728A4CFD2BA08ED500CAFD73 /* HomePage */ = {
@@ -259,9 +314,9 @@
 		9E37FC312BA32F07007835C7 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				9E37FC322BA32F07007835C7 /* EndTimePickerViewModel.swift */,
-				9E37FC332BA32F07007835C7 /* TimerViewModel.swift */,
-				9E37FC342BA32F07007835C7 /* CircleProgressViewModel.swift */,
+				723BDA1C2BA4F2F50008210F /* Data.swift */,
+				723BDA1B2BA4F2F50008210F /* TimeManager.swift */,
+				723BDA1A2BA4F2F50008210F /* TimerManager.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -290,6 +345,7 @@
 				9E898D8E2B974E4E003CB854 /* kei-doro */,
 				9E898D8D2B974E4E003CB854 /* Products */,
 				9E37FC2D2BA32E72007835C7 /* Frameworks */,
+				723BDA172BA4F13A0008210F /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,6 +360,8 @@
 		9E898D8E2B974E4E003CB854 /* kei-doro */ = {
 			isa = PBXGroup;
 			children = (
+				723BDA2B2BA4F5810008210F /* Models */,
+				723BDA182BA4F2C70008210F /* GoogleService-Info.plist */,
 				9E37FC3B2BA33293007835C7 /* Utils */,
 				72029D3C2BA1F13600E37E62 /* Info.plist */,
 				728A4CBD2B9EADFB00CAFD73 /* kei-doro.entitlements */,
@@ -327,7 +385,6 @@
 		9E898D9E2B97747C003CB854 /* Theme */ = {
 			isa = PBXGroup;
 			children = (
-				728A4CBE2B9ED6C700CAFD73 /* GoogleService-Info.plist */,
 				9E898D9F2B97749D003CB854 /* Colors.swift */,
 			);
 			path = Theme;
@@ -336,6 +393,8 @@
 		9E898DE42B9ADEC4003CB854 /* Pages */ = {
 			isa = PBXGroup;
 			children = (
+				723BDA242BA4F5070008210F /* CreateUserPage */,
+				723BDA202BA4F4A80008210F /* SignUpPage */,
 				9E37FC302BA32F07007835C7 /* TimerPage */,
 				9E37FC1D2BA32DA8007835C7 /* ChatPage */,
 				72029D372BA1F07700E37E62 /* MapPage */,
@@ -389,15 +448,6 @@
 				9E37FC192BA32CF6007835C7 /* PlayView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		CEBD06B02BA410D400F0844E /* MissionPage */ = {
-			isa = PBXGroup;
-			children = (
-				CEBD06AE2BA410D400F0844E /* MissionDetailView.swift */,
-				CEBD06AF2BA410D400F0844E /* MissionView.swift */,
-			);
-			path = MissionPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -468,12 +518,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E898D972B974E4F003CB854 /* Preview Assets.xcassets in Resources */,
-				728A4CBF2B9ED6C700CAFD73 /* GoogleService-Info.plist in Resources */,
 				9E37FC2A2BA32DA8007835C7 /* TableViewCell.xib in Resources */,
 				9E37FC292BA32DA8007835C7 /* MessageInputAccesoryView.xib in Resources */,
 				9E898DE12B988967003CB854 /* .gitignore in Resources */,
 				9E37FC272BA32DA8007835C7 /* ChatViewController.xib in Resources */,
 				9E898D942B974E4F003CB854 /* Assets.xcassets in Resources */,
+				723BDA192BA4F2C70008210F /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,33 +536,33 @@
 			files = (
 				9E898DEB2B9ADF9A003CB854 /* NFCViewModel.swift in Sources */,
 				CE0228A92BA0A1AC0013A2E2 /* HomeView.swift in Sources */,
-				723BDA142BA341D50008210F /* MissionDetailView.swift in Sources */,
 				CE0228A72BA0A1870013A2E2 /* HomeViewModel.swift in Sources */,
 				9E37FC282BA32DA8007835C7 /* TableViewCell.swift in Sources */,
-				723BDA132BA341D50008210F /* MissionView.swift in Sources */,
 				9E37FC1C2BA32CF6007835C7 /* PlayView.swift in Sources */,
+				723BDA1E2BA4F2F50008210F /* TimeManager.swift in Sources */,
 				9E37FC2B2BA32DA8007835C7 /* MessageInputAccesoryView.swift in Sources */,
 				9E37FC3A2BA32F07007835C7 /* TimerView.swift in Sources */,
-				CEBD06B22BA410D400F0844E /* MissionView.swift in Sources */,
+				723BDA2D2BA4F5810008210F /* User.swift in Sources */,
+				723BDA232BA4F4A80008210F /* SignUpView.swift in Sources */,
 				72029D3B2BA1F09C00E37E62 /* MapView.swift in Sources */,
 				9E37FC1A2BA32CF6007835C7 /* DoroPlayView.swift in Sources */,
-				9E37FC382BA32F07007835C7 /* TimerViewModel.swift in Sources */,
+				723BDA2A2BA4F5310008210F /* CreateUserViewModel.swift in Sources */,
 				9E37FC1B2BA32CF6007835C7 /* KeiPlayView.swift in Sources */,
 				9E898D902B974E4E003CB854 /* KeiDoroApp.swift in Sources */,
 				728A4D232BA16E2800CAFD73 /* CreateTeamViewModel.swift in Sources */,
 				9E898DE82B9ADF51003CB854 /* NFCView.swift in Sources */,
 				9E37FC2C2BA32DA8007835C7 /* ChatView.swift in Sources */,
+				723BDA282BA4F5290008210F /* CreateUserView.swift in Sources */,
 				728A4D212BA168F300CAFD73 /* CreateTeamView.swift in Sources */,
-				9E37FC372BA32F07007835C7 /* EndTimePickerViewModel.swift in Sources */,
-				9E37FC392BA32F07007835C7 /* CircleProgressViewModel.swift in Sources */,
+				723BDA1D2BA4F2F50008210F /* TimerManager.swift in Sources */,
 				9E37FC262BA32DA8007835C7 /* ChatViewController.swift in Sources */,
-				CEBD06B12BA410D400F0844E /* MissionDetailView.swift in Sources */,
 				728A4D282BA173E200CAFD73 /* JoinTeamView.swift in Sources */,
 				72029D362BA18FE400E37E62 /* JoinTeamViewModel.swift in Sources */,
 				723BDA0A2BA1F3DA0008210F /* LocationManager.swift in Sources */,
 				9E898DA02B97749D003CB854 /* Colors.swift in Sources */,
 				728A4CFC2B9F2F8200CAFD73 /* NFCSession.swift in Sources */,
 				723BDA162BA343D90008210F /* MapViewModel.swift in Sources */,
+				723BDA1F2BA4F2F50008210F /* Data.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
