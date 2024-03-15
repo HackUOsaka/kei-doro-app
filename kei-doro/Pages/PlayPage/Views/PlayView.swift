@@ -13,24 +13,9 @@ struct PlayView: View {
             VStack {
                 Spacer()
                 VStack {
-                    if role == true {
-                        if true {
-                            DoroTimerLabel()
-                        }
-                        if false {
-                            KeiTimerLabel()
-                        }
-                    } else {
-                        if true {
-                            KeiTimerLabel()
-                        }
-                        if false {
-                            DoroTimerLabel()
-                        }
-                    }
                     ZStack(alignment: .center){
-                        TimerView()
-                        ProgressBarView()
+//                        TimerView()
+//                        ProgressBarView()
                     }.padding(.all, 40)
                 }
                 Spacer()
