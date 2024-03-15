@@ -50,7 +50,7 @@ struct JoinTeamView: View {
             Task{
                 do{
                     try await getUsers(gameId: gameId)
-                  gettime(gameId: gameId)
+                    gettime(gameId: gameId)
                 }
                 catch{
                     print(error)
@@ -58,7 +58,7 @@ struct JoinTeamView: View {
             }
             
         }
-       
+        
     }
     func getUsers(gameId: String)async throws{
         var userName = [String]()
@@ -89,12 +89,6 @@ struct JoinTeamView: View {
                     users.append(firstName)
                 }
                 
-                print("Current data: \(userName)")
-                
-                
-                
-                
-                
             }
         
     }
@@ -115,12 +109,12 @@ struct JoinTeamView: View {
                 let limit = data["limit"] as! String
                 let Oni = data["oni"] as! String
                 
-              
                 
-              time = limit
+                
+                time = limit
                 oni = Oni
                 print("Current data: \(userName)")
-                  
+                
                 
             }
         
