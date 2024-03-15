@@ -3,6 +3,7 @@ import SwiftUI
 
 struct PlayView: View {
     @EnvironmentObject var timeManager: TimeManager
+    @StateObject var session = NFCSession()
     //    @ObservedObject var gameId: Model
     //ここも編集する！
     let role: Bool = true
@@ -53,6 +54,21 @@ struct PlayView: View {
                             MissionButton()
                         }
                     }
+                    Spacer()
+                    Button(action: {
+                        session.startReadSession { text, error in
+                            if let error = error {
+                                print(error)
+                            }else{
+                          //textがuseridです
+                            }
+                        }
+                    }, label: {
+                        Text("捕まえた")
+                    })
+                   
+                        
+                    
                     Spacer()
                     CallButton()
                     Spacer()
