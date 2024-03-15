@@ -9,7 +9,8 @@ struct KeiDoroApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
-            HomeView()
+//            HomeView()
+            SignUpView()
         }
     }
 }
