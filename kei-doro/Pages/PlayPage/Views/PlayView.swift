@@ -2,7 +2,8 @@
 import SwiftUI
 
 struct PlayView: View {
-//    @ObservedObject var gameId: Model
+    @EnvironmentObject var timeManager: TimeManager
+    //    @ObservedObject var gameId: Model
     //ここも編集する！
     let role: Bool = true
     var body: some View {
@@ -28,8 +29,8 @@ struct PlayView: View {
                         }
                     }
                     ZStack(alignment: .center){
-                        GameTimerLabel()
                         TimerView()
+                        ProgressBarView()
                     }.padding(.all, 40)
                 }
                 Spacer()
