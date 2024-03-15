@@ -9,27 +9,34 @@ import Foundation
 import FirebaseFirestore
 
 
-struct User {
-    var id: String
-    var name: String
-    var password: String
-}
 class CreateUserViewModel: ObservableObject {
     let db = Firestore.firestore()
-    
+    var newUser: [User] = []
+    let saveData: UserDefaults = UserDefaults.standard
+
     func createUser(name: String, completion: @escaping (Result<User, Error>) -> Void) {
         let userId = UUID().uuidString
+        let userData = User(userId: userId, name: name, password: "あああああ")
+        self.newUser.append(userData)
         
-        let newUser = User(id: userId, name: name, password: "あああああ")
         print("ああああああああああああ")
         print(newUser)
+        print("いいいい")
+        print(userData)
         
-        db.collection("users").document(userId).setData(["id": userId, "name": name, "password": newUser.password]) { error in
+        db.collection("users").document(userId).setData(["id": userId, "name": name, "password": userData.password]) { error in
             if let error = error {
                 completion(.failure(error))
             } else {
-                completion(.success(newUser))
+                completion(.success(userData))
             }
         }
+        
+        saveData.set(userData.userId, forKey: "userId")
+        saveData.set(userData.name, forKey: "userName")
+        
+        print("うううううううう")
+        print(saveData.object(forKey: "userId"))
     }
 }
+
