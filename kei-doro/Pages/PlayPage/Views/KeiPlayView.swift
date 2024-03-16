@@ -16,19 +16,6 @@ struct KeiPlayView: View {
     }
 }
 
-struct KeiTimerLabel: View {
-    var body: some View {
-        VStack {
-            Text("トランシーバー残量")
-                .font(.subheadline)
-                .foregroundStyle(.white)
-            Text("00:00:00")
-                .font(.system(size: 32))
-                .foregroundStyle(.white)
-        }
-    }
-}
-
 struct ArrestNumberLabel: View {
     let arrest = ["", ""]
     var body: some View {

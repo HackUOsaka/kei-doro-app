@@ -12,13 +12,30 @@ struct SignUpView: View {
     @State private var createUser = false
     
     var body: some View {
-        Button{
-            createUser.toggle()
-        } label: {
-            Text("ユーザー情報を登録")
-        }
-        .sheet(isPresented: $createUser){
-            CreateUserView()
+        ZStack {
+            Color.backColor
+                .ignoresSafeArea()
+            VStack {
+                Image("logoImage")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 300, height: 300)
+                    .padding(.bottom, 24)
+                Button{
+                    createUser.toggle()
+                } label: {
+                    Text("ユーザー情報を登録")
+                        .foregroundStyle(Color.secondColor)
+                        .frame(width: 320, height: 72)
+                        .overlay(
+                        RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.secondColor, lineWidth: 2)
+                        )
+                }
+                .sheet(isPresented: $createUser){
+                    CreateUserView()
+                }
+            }
         }
     }
 }

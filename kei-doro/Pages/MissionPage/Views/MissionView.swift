@@ -16,6 +16,8 @@ struct MissionView: View {
                 VStack {
                     NavigationBarView()
                         .padding(.vertical, 24)
+                    missionDetailTextVew()
+                    missionCount()
                 }
             }
         }
@@ -46,11 +48,31 @@ struct NavigationBarView: View {
     }
 }
 
-//struct missionDetailVIew: View {
-//    var body: some View {
-//
-//    }
-//}
+struct missionDetailTextVew: View {
+    var body: some View {
+        
+        Text("3人分のNFCコードを\n読み込んでください")
+            .foregroundStyle(.white)
+            .frame(width: 342, height: 80)
+            .overlay(
+                RoundedRectangle(cornerRadius: 4)
+                    .stroke(Color.mainColor, lineWidth: 2)
+            )
+    }
+}
+
+struct missionCount: View {
+    var body: some View {
+        Text("読み込んだ人数")
+            .foregroundStyle(.white)
+            .font(.system(size: 20))
+            .padding(.top, 24)
+        Text("1")//あとで変えるよーーーーー
+            .font(.system(size: 40))
+            .foregroundStyle(.white)
+            .padding(.top, 4)
+    }
+}
 
 #Preview {
     MissionView()

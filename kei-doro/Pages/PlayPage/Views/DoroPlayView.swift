@@ -11,33 +11,6 @@ struct DoroPlayView: View {
     }
 }
 
-struct DoroTimerLabel: View {
-    var body: some View {
-        HStack {
-            Spacer()
-            VStack {
-                Text("トランシーバー残量")
-                    .font(.subheadline)
-                    .foregroundStyle(.white)
-                Text("00:00:00")
-                    .font(.system(size: 32))
-                    .foregroundStyle(.white)
-            }
-            Spacer()
-            //これ必要ないかも
-            VStack {
-                Text("ミッション終了まで")
-                    .font(.subheadline)
-                    .foregroundStyle(.white)
-                Text("00:00:00")
-                    .font(.system(size: 32))
-                    .foregroundStyle(.white)
-            }
-            Spacer()
-        }
-    }
-}
-
 struct MissionButton: View {
     @State var toMissionView: Bool = false
     var body: some View {
@@ -56,6 +29,7 @@ struct MissionButton: View {
         })
         .sheet(isPresented: $toMissionView, content: {
             MissionView()
+                .presentationDetents([.large, .height(400), .fraction(0.5)])
         })
     }
 }
