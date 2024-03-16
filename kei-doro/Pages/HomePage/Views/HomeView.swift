@@ -36,8 +36,7 @@
                      }, label: {
                          Text("チーム作成")
                      })
-                     .font(.system(size: 22))
-                     //            .bold()
+                     .font(.system(size: 20))
                      .foregroundColor(.white)
                      .frame(width: 320, height: 72)
                      .background(Color.secondColor)
@@ -46,13 +45,19 @@
                          RoundedRectangle(cornerRadius: 5)
                              .stroke(Color.mainColor, lineWidth: 2))
                      .padding(.bottom, 40)
+                     
+                     .sheet(isPresented: $createTeam, content: {
+                         CreateTeamView()
+                             .presentationDetents([.large, .height(400), .fraction(0.5)])
+                     })
+                     
             
                      Button(action: {
                          JoinTeam.toggle()
                      }, label: {
                          Text("IDを入力")
                      })
-                     .font(.system(size: 22))
+                     .font(.system(size: 20))
                      .foregroundColor(.white)
                      .frame(width: 320, height: 72)
                      .background(Color.secondColor)
@@ -61,31 +66,28 @@
                          RoundedRectangle(cornerRadius: 5)
                              .stroke(Color.mainColor, lineWidth: 2)
                      )
-                     .sheet(isPresented: $createTeam) {
-                         CreateTeamView(userId: "", gameId: "", picktime: "10", pickOni:  "1", gameMasterName: "")
+                     .alert("ゲームIDを入力", isPresented: $JoinTeam) {
+                         TextField("ゲームID", text: $gameId)
+                         Button {
+                             Task {
+                                 do{
+                                     name = try await  viewModel.makeIcon()
+                                     boolGameTeam =  try await viewModel.searchgame(gameId: gameId, name: name)
+                                     if boolGameTeam == false{
+                                         errorArart.toggle()
+                                     }else{
+                                         openJoinView.toggle()
+                                     }
+                                     
+                                 }
+                             }
+                             
+                         } label: {
+                             Text("OK")
+                         }
                      }
                  }
                  Spacer()
-             }
-             .alert("ゲームIDを入力", isPresented: $JoinTeam) {
-                 TextField("ゲームID", text: $gameId)
-                 Button {
-                     Task {
-                         do{
-                             name = try await  viewModel.makeIcon()
-                             boolGameTeam =  try await viewModel.searchgame(gameId: gameId, name: name)
-                             if boolGameTeam == false{
-                                 errorArart.toggle()
-                             }else{
-                                 openJoinView.toggle()
-                             }
-         
-                         }
-                     }
-            
-                 } label: {
-                     Text("OK")
-                 }
              }
       
              .alert("ゲームIDが間違っています", isPresented:  $errorArart) {

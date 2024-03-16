@@ -11,9 +11,13 @@ class CreateTeamViewModel: ObservableObject {
     let db = Firestore.firestore()
     var savedata: UserDefaults = UserDefaults.standard
     
+    //0か1を返す関数
+    func randomZeroOrOne() -> Int {
+        return Int(arc4random_uniform(2))
+    }
     
     func makeIcon() async throws -> String{
-        let UserId = savedata.object(forKey: "UserId")
+        let UserId = savedata.object(forKey: "userId")
         let document = try await db.collection("users").document(UserId as! String ).getDocument()
         let data = document.data()
         let name = data?["name"] as! String
@@ -22,38 +26,60 @@ class CreateTeamViewModel: ObservableObject {
         return name
     }
     
-    func createGameId(userId: String, name: String) async throws -> String{
-        
-        let uuid = UUID()
-        let gameId = String(uuid.uuidString.prefix(6))
-        try await db.collection("games").document(gameId).setData([
+    func postGameData(gameId: String, userId: String) async throws -> Optional<Any> {
+        //gametable
+        let gameData = try await db.collection("games").document(gameId).setData([
             "id": gameId,
-            "playerIds": [userId],
-            "names" : [name],
-            "mode:": "kei-doro",
-            "oni": "1",
-            "limit": "10"])
+            "limit": 10,
+            //            "oni": randomZeroOrOne(),
+            "playerIds": [userId]
+        ])
+        savedata.set(gameId, forKey: "gameId")
+        //playerTable
+        let role = randomZeroOrOne()
+        let playerData = try await db.collection("players").document().setData([
+            "userId": userId,
+            "role": role,
+            "arrested": false
+        ])
         
-        savedata.set(gameId, forKey: "GameId")    
-        return gameId
+        print("あはあはあはあは")
+        print(gameData)
+        return playerData
     }
     
+//    func createGameId(userId: String, name: String) async throws -> String{
+//        
+//        let uuid = UUID()
+//        let gameId = String(uuid.uuidString.prefix(6))
+//        try await db.collection("games").document(gameId).setData([
+//            "id": gameId,
+//            "playerIds": [userId],
+//            "names" : [name],
+//            "mode:": "kei-doro",
+//            "oni": "1",
+//            "limit": "10"])
+//        
+//        savedata.set(gameId, forKey: "GameId")    
+//        return gameId
+//    }
+    
     func getUserId() async throws -> String{
-        let UserId = savedata.object(forKey: "UserId")
+        let UserId = savedata.object(forKey: "userId")
         return UserId as! String
     }
-    func saveTime(gameId: String, limit: String) async throws{
-        
-        try await db.collection("games").document(gameId).updateData([
-            "limit": limit
-        ])
-    }
-    func saveOni(gameId: String, Oni: String) async throws{
-        
-        try await db.collection("games").document(gameId).updateData([
-            "oni": Oni
-        ])
-    }
+//    func saveTime(gameId: String, limit: String) async throws{
+//        
+//        try await db.collection("games").document(gameId).updateData([
+//            "limit": limit
+//        ])
+//    }
+//    func saveOni(gameId: String, Oni: String) async throws{
+//        
+//        try await db.collection("games").document(gameId).updateData([
+//            "oni": Oni
+//        ])
+//    }
     func startTimer(gameId: String) async throws{
         try await db.collection("games").document(gameId).updateData([
             "startedTime": FieldValue.serverTimestamp()
@@ -81,7 +107,7 @@ class CreateTeamViewModel: ObservableObject {
                     userName.append(firstName)
                 }
                 print("Current data: \(userName)")
-                CreateTeamView(userId: "", gameId: "", picktime: "", pickOni: "", gameMasterName: "") .users = userName
+//                CreateTeamView(userId: "", gameId: "", picktime: "", pickOni: "", gameMasterName: "") .users = userName
                 
                 
             }

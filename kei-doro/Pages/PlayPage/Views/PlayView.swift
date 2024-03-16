@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct PlayView: View {
-    @EnvironmentObject var timeManager: TimeManager
+//    @EnvironmentObject var timeManager: TimeManager
     //    @ObservedObject var gameId: Model
     //ここも編集する！
     let role: Bool = true
@@ -14,8 +14,8 @@ struct PlayView: View {
                 Spacer()
                 VStack {
                     ZStack(alignment: .center){
-//                        TimerView()
-//                        ProgressBarView()
+                        TimerView()
+                        CircleView()
                     }.padding(.all, 40)
                 }
                 Spacer()
@@ -86,9 +86,10 @@ struct CallButton: View {
 }
 
 struct MapButton: View {
+    @State var toMapView = false
     var body: some View {
         Button(action: {
-            print()
+            self.toMapView = true
         }, label: {
             Image(systemName: "map")
                 .font(.system(size: 25))
@@ -99,6 +100,9 @@ struct MapButton: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 50)
                         .stroke(Color.secondColor, lineWidth: 1))
+        })
+        .sheet(isPresented: $toMapView, content: {
+            MapView()
         })
     }
 }

@@ -1,20 +1,20 @@
+////
+////  Data.swift
+////  kei-doro
+////
+////  Created by 大澤清乃 on 2024/03/16.
+////
 //
-//  Data.swift
-//  kei-doro
+//import SwiftUI
 //
-//  Created by 大澤清乃 on 2024/03/16.
+//enum TimeFormat {
+//    case hr
+//    case min
+//    case sec
+//}
 //
-
-import SwiftUI
-
-enum TimeFormat {
-    case hr
-    case min
-    case sec
-}
-
-enum TimerStatus {
-    case running
-    case pause
-    case stopped
-}
+//enum TimerStatus {
+//    case running
+//    case pause
+//    case stopped
+//}

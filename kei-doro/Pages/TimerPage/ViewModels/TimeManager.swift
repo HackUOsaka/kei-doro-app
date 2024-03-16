@@ -12,9 +12,9 @@ class TimeManager: ObservableObject {
     //カウントダウン開始前の最大時間
     @Published var maxValue: Double = 0
     //設定した時間が1時間以上、1時間未満1分以上、1分未満1秒以上によって変わる時間表示形式
-    @Published var displayedTimeFormat: TimeFormat = .min
+//    @Published var displayedTimeFormat: TimeFormat = .min
     //タイマーのステータス
-    @Published var timerStatus: TimerStatus = .stopped
+//    @Published var timerStatus: TimerStatus = .stopped
     //プログレスバー表示オン/オフの設定
     @Published var isProgressBarOn: Bool = true
     //エフェクトアニメーション表示オン/オフの設定
@@ -33,50 +33,50 @@ class TimeManager: ObservableObject {
         //時間表示形式を残り時間（最大時間）から指定する
         //60秒未満なら00形式、60秒以上3600秒未満なら00:00形式、3600秒以上なら00:00:00形式
         if duration < 60 {
-            displayedTimeFormat = .sec
+//            displayedTimeFormat = .sec
         } else if duration < 3600 {
-            displayedTimeFormat = .min
+//            displayedTimeFormat = .min
         } else {
-            displayedTimeFormat = .hr
+//            displayedTimeFormat = .hr
         }
     }
     
     //カウントダウン中の残り時間を表示するためのメソッド
-    func displayTimer() -> String {
-        //残り時間（時間単位）= 残り合計時間（秒）/3600秒
-        let hr = Int(duration) / 3600
-        //残り時間（分単位）= 残り合計時間（秒）/ 3600秒 で割った余り / 60秒
-        let min = Int(duration) % 3600 / 60
-        //残り時間（秒単位）= 残り合計時間（秒）/ 3600秒 で割った余り / 60秒 で割った余り
-        let sec = Int(duration) % 3600 % 60
-        
-        //setTimerメソッドの結果によって時間表示形式を条件分岐し、上の3つの定数を組み合わせて反映
-        switch displayedTimeFormat {
-        case .hr:
-            return String(format: "%02d:%02d:%02d", hr, min, sec)
-        case .min:
-            return String(format: "%02d:%02d", min, sec)
-        case .sec:
-            return String(format: "%02d", sec)
-        }
-    }
+//    func displayTimer() -> String {
+//        //残り時間（時間単位）= 残り合計時間（秒）/3600秒
+//        let hr = Int(duration) / 3600
+//        //残り時間（分単位）= 残り合計時間（秒）/ 3600秒 で割った余り / 60秒
+//        let min = Int(duration) % 3600 / 60
+//        //残り時間（秒単位）= 残り合計時間（秒）/ 3600秒 で割った余り / 60秒 で割った余り
+//        let sec = Int(duration) % 3600 % 60
+//        
+//        //setTimerメソッドの結果によって時間表示形式を条件分岐し、上の3つの定数を組み合わせて反映
+////        switch displayedTimeFormat {
+////        case .hr:
+////            return String(format: "%02d:%02d:%02d", hr, min, sec)
+////        case .min:
+////            return String(format: "%02d:%02d", min, sec)
+////        case .sec:
+////            return String(format: "%02d", sec)
+////        }
+//    }
     
     //スタートボタンをタップしたときに発動するメソッド
     func start() {
         //タイマーステータスを.runningにする
-        timerStatus = .running
+//        timerStatus = .running
     }
     
     //一時停止ボタンをタップしたときに発動するメソッド
     func pause() {
         //タイマーステータスを.pauseにする
-        timerStatus = .pause
+//        timerStatus = .pause
     }
     
     //リセットボタンをタップしたときに発動するメソッド
     func reset() {
         //タイマーステータスを.stoppedにする
-        timerStatus = .stopped
+//        timerStatus = .stopped
         //残り時間がまだ0でなくても強制的に0にする
         duration = 0
     }

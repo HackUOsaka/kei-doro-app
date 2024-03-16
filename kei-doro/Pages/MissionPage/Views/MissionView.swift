@@ -51,7 +51,8 @@ struct NavigationBarView: View {
 struct missionDetailTextVew: View {
     var body: some View {
         
-        Text("")
+        Text("3人分のNFCコードを\n読み込んでください")
+            .foregroundStyle(.white)
             .frame(width: 342, height: 80)
             .overlay(
                 RoundedRectangle(cornerRadius: 4)
@@ -62,7 +63,7 @@ struct missionDetailTextVew: View {
 
 struct missionCount: View {
     var body: some View {
-        Text("タッチできた人数")
+        Text("読み込んだ人数")
             .foregroundStyle(.white)
             .font(.system(size: 20))
             .padding(.top, 24)
