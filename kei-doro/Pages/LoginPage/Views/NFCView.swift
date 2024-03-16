@@ -99,6 +99,9 @@ struct getTestNFC: View {
     @State private var alertMessage = ""
     @State private var isAlertShown = false
     
+//    var saveData
+    var savedata: UserDefaults = UserDefaults.standard
+
     var randomId = UUID().uuidString
 
     var body: some View {
@@ -116,28 +119,29 @@ struct getTestNFC: View {
         })
 // <<<<<<< feature/#56-NFCView
 // =======
-//         .alert(isPresented: $isAlertShown) {
-//             Alert(
-//                 title: Text(""),
-//                 message: Text(alertMessage),
-//                 dismissButton: .default(Text("OK")))
-//         }
-//         //シュミレーターでやる人はこの辺のコード入ります
+         .alert(isPresented: $isAlertShown) {
+             Alert(
+                 title: Text(""),
+                 message: Text(alertMessage),
+                 dismissButton: .default(Text("OK")))
+         }
+         //シュミレーターでやる人はこの辺のコード入ります
         
-//         .onAppear(){
-     
-//             let random = UUID().uuidString
-//         //    savedata.set(random, forKey: "UserId")
-            
-//             Task{
-//                 do{
-//                     try await viewModel.saveUserId(UserId: random)
-//                 }
-//                 catch{
-//                     print(error)
-//                 }
-//             }
-//         }
+         .onAppear(){
+    
+             var saveData: UserDefaults = UserDefaults.standard
+
+             let random = UUID().uuidString
+             saveData.set(random, forKey: "UserId")
+             Task{
+                 do{
+                     try await viewModel.saveUserId(UserId: random)
+                 }
+                 catch{
+                     print(error)
+                 }
+             }
+         }
 // >>>>>>> master
     }
 }

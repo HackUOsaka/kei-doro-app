@@ -6,7 +6,6 @@
 //
 
  import SwiftUI
-
  struct HomeView: View {
      @ObservedObject var viewModel = HomeViewModel()
      @State var createTeam = false
@@ -16,8 +15,9 @@
      @State var gameId = ""
      @State var openJoinView = false
      @State var name = ""
+//     var user: User
      var body: some View {
-        
+//        Text(user)
          ZStack {
              Color.backColor
                  .ignoresSafeArea()

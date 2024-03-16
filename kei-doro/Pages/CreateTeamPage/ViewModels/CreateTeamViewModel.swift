@@ -7,6 +7,7 @@
 
 import Foundation
 import FirebaseFirestore
+
 class CreateTeamViewModel: ObservableObject {
     let db = Firestore.firestore()
     var savedata: UserDefaults = UserDefaults.standard
