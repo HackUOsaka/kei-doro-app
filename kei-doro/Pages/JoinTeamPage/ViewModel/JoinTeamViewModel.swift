@@ -24,18 +24,32 @@ class JoinTeamViewModel: ObservableObject {
         return userName
     }
     
-    func getTime(gameId: String)async throws -> String{
-        let document =  try await db.collection("games").document(gameId).getDocument()
-        let data = document.data()
-        let time = data?["limit"] as! String
-        return time
-        
+    func randomZeroOrOne() -> Int {
+        return Int(arc4random_uniform(2))
     }
-    func getOni(gameId: String)async throws -> String{
-        let document =  try await db.collection("games").document(gameId).getDocument()
+    //room idを入力して入る人がおすBtnの関数
+    func postUserData(gameId: String,userId: String) async throws -> Optional<Any> {
+        let savedata: UserDefaults = UserDefaults.standard
+        let document = try await db.collection("games").document(gameId).getDocument()
         let data = document.data()
-        let oni = data?["oni"] as! String
-        return oni
+        var users = data?["playerIds"] as! [String]
+        //useridを追加
+        users.append(userId)
         
+        //userIdをgameTableに追加
+        try await db.collection("games").document(gameId).updateData([
+            "playerIds": users
+        ])
+        
+        let role = randomZeroOrOne()
+        //playerに追加
+        let playerData = try await db.collection("players").document().setData([
+            "userId": userId,
+            "role": role
+        ])
+        
+        
+        savedata.set(role, forKey: "role")
+        return playerData
     }
 }

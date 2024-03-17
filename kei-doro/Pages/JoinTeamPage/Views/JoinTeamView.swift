@@ -19,7 +19,7 @@ struct JoinTeamView: View {
     var body: some View {
         VStack{
             HStack{
-                Text("ゲームID")
+                Text("Game ID：")
                 Text(gameId)
                 
             }
@@ -35,14 +35,14 @@ struct JoinTeamView: View {
                         .padding()
                 }
             }
-            HStack{
-                Text("遊ぶ時間")
-                Text(time + "分")
-            }
-            HStack{
-                Text("鬼の人数")
-                Text(oni + "人")
-            }
+//            HStack{
+//                Text("遊ぶ時間")
+//                Text(time + "分")
+//            }
+//            HStack{
+//                Text("鬼の人数")
+//                Text(oni + "人")
+//            }
             
             
         }

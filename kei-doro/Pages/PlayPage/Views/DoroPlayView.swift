@@ -2,7 +2,7 @@
 import SwiftUI
 
 struct DoroPlayView: View {
-    let role: Bool = false
+//    let role: Int = 1
     var body: some View {
         ZStack {
             Color.backColor

@@ -28,6 +28,7 @@ class CreateTeamViewModel: ObservableObject {
     }
     
     func postGameData(gameId: String, userId: String) async throws -> Optional<Any> {
+        let savedata: UserDefaults = UserDefaults.standard
         //gametable
         let gameData = try await db.collection("games").document(gameId).setData([
             "id": gameId,
@@ -43,6 +44,8 @@ class CreateTeamViewModel: ObservableObject {
             "role": role,
             "arrested": false
         ])
+        
+        savedata.set(role, forKey: "role")
         
         print("あはあはあはあは")
         print(gameData)

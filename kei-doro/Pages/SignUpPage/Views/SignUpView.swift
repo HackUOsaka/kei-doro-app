@@ -32,9 +32,9 @@ struct SignUpView: View {
                             .stroke(Color.secondColor, lineWidth: 2)
                         )
                 }
-                .sheet(isPresented: $createUser){
+                .fullScreenCover(isPresented: $createUser, content: {
                     CreateUserView()
-                }
+                })
             }
         }
     }

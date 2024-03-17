@@ -2,11 +2,10 @@
 import SwiftUI
 
 struct PlayView: View {
-//    @EnvironmentObject var timeManager: TimeManager
-    //    @ObservedObject var gameId: Model
+    let savedata: UserDefaults = UserDefaults.standard
     //ここも編集する！
-    let role: Bool = true
     var body: some View {
+        let role = savedata.integer(forKey: "role")
         ZStack {
             Color.backColor
                 .ignoresSafeArea()
@@ -20,14 +19,14 @@ struct PlayView: View {
                 }
                 Spacer()
                 HStack {
-                    if role == true {
+                    if role == 1 {
                         if true {
                             MissionButton()
                         }
                         if false {
                             ArrestNumberLabel()
                         }
-                    } else {
+                    } else if role == 0 {
                         if true {
                             ArrestNumberLabel()
                         }
@@ -36,7 +35,8 @@ struct PlayView: View {
                         }
                     }
                     Spacer()
-                    CallButton()
+//                    CallButton()
+                    logo()
                     Spacer()
                     MapButton()
                 }
@@ -56,6 +56,15 @@ struct GameTimerLabel: View {
                 .font(.largeTitle)
                 .foregroundStyle(.white)
         }
+    }
+}
+
+struct logo: View {
+    var body: some View {
+        Image("logoImage")
+            .resizable()
+            .frame(width: 120, height: 120)
+            .scaledToFit()
     }
 }
 
