@@ -34,7 +34,6 @@ struct MapView: View {
             }
             UserAnnotation()
         }
-        
         .mapControls {
             MapPitchToggle()
             MapUserLocationButton()
@@ -47,13 +46,12 @@ struct MapView: View {
         Button(action: {
             
             
-            
         }, label: {
             Text("位置情報更新")
         })
         .onAppear(){
-            let UserId = savedata.object(forKey: "UserId")
-            let gameId = savedata.object(forKey: "GameId")
+            let UserId = savedata.object(forKey: "userId")
+            let gameId = savedata.object(forKey: "gameId")
             Task{
                 do{
                     try await viewModel.setRegion(gameId: gameId as! String, userId: UserId as! String)

@@ -9,7 +9,7 @@ import SwiftUI
 import FirebaseFirestore
 
 struct CreateTeamView: View {
-    @EnvironmentObject var timeManager: TimeManager
+//    @EnvironmentObject var timeManager: TimeManager
     
     @ObservedObject var viewModel = CreateTeamViewModel()
 //    @State var userId: String
@@ -20,6 +20,7 @@ struct CreateTeamView: View {
 //    @State var gameStart = false
 //    @State var users = [String]()
 //    @State var names = [String]()
+    @State var showPlayView: Bool = false
     
     let savedata: UserDefaults = UserDefaults.standard
     let uuid = UUID()
@@ -39,6 +40,7 @@ struct CreateTeamView: View {
                 .foregroundColor(.white)
                 .padding()
                 Button(action: {
+                    self.showPlayView = true
                     Task {
                         do{
                             try await viewModel.postGameData(gameId: gameId, userId: userId!)
@@ -48,6 +50,9 @@ struct CreateTeamView: View {
                     }
                 }, label: {
                     Text("Start")
+                })
+                .fullScreenCover(isPresented: $showPlayView, content: {
+                    PlayView()
                 })
             }
         }
