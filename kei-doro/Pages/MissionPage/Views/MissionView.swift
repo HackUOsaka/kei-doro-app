@@ -1,10 +1,3 @@
-//
-//  MissionView.swift
-//  kei-doro
-//
-//  Created by 大澤清乃 on 2024/03/14.
-//
-
 import SwiftUI
 
 struct MissionView: View {
@@ -18,6 +11,7 @@ struct MissionView: View {
                         .padding(.vertical, 24)
                     missionDetailTextVew()
                     missionCount()
+                    sendButton()
                 }
             }
         }
@@ -25,13 +19,15 @@ struct MissionView: View {
 }
 
 struct NavigationBarView: View {
+    @State private var isShowAlert = false
     @Environment(\.dismiss) private var dismiss
     var body: some View {
         HStack {
             Spacer().overlay(
                 HStack {
                     Button(action: {
-                        dismiss()
+                        isShowAlert.toggle()
+//                        dismiss()
                     }, label: {
                         Text("Close")
                             .padding(.leading, 16)
@@ -44,6 +40,13 @@ struct NavigationBarView: View {
                 .font(.system(size: 20))
                 .foregroundStyle(.white)
             Spacer()
+        }
+        .alert("ミッションを中断する", isPresented: $isShowAlert) {
+            Button("中断する", role: .destructive) {
+                dismiss()
+            }
+        } message: {
+            Text("ミッション内容がリセットされます")
         }
     }
 }
@@ -71,6 +74,23 @@ struct missionCount: View {
             .font(.system(size: 40))
             .foregroundStyle(.white)
             .padding(.top, 4)
+    }
+}
+
+struct sendButton: View {
+    var body: some View {
+        Button(action: {
+            print()
+        }, label: {
+            Text("送信")
+        })
+        .frame(width: 342, height: 64)
+        .foregroundColor(.white)
+        .background(Color.secondColor)
+        .overlay(
+            RoundedRectangle(cornerRadius: 4)
+                .stroke(Color.mainColor, lineWidth: 2)
+        )
     }
 }
 
